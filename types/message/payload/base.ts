@@ -13,3 +13,8 @@ export interface BasePayload {
 export interface RequestPayload extends BasePayload {
   requestId: string
 }
+
+export interface ResponsePayload extends BasePayload {
+  requestId: string
+  result: boolean
+}
