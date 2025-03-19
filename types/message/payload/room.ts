@@ -1,4 +1,4 @@
-import type { BasePayload, RequestPayload } from "./base";
+import type { BasePayload } from "./base";
 
 export interface RoomPayload extends BasePayload {
   roomId: string;
@@ -7,7 +7,7 @@ export interface RoomPayload extends BasePayload {
 /**
  * プレイヤー参加登録ペイロード
  */
-export interface PlayerEntryPayload extends RequestPayload, RoomPayload {
+export interface PlayerEntryPayload extends RoomPayload {
   type: 'PlayerEntry'
   player: {
     name: string;

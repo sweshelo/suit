@@ -1,4 +1,4 @@
 import type { PlayerEntryPayload } from "./room";
-import type { RoomOpenPayload } from "./server";
+import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from "./server";
 
-export type Payload = RoomOpenPayload | PlayerEntryPayload
+export type Payload = RoomOpenRequestPayload | RoomOpenResponsePayload | PlayerEntryPayload
