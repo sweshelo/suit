@@ -33,4 +33,4 @@ export interface ClientMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'client'>
 }
 
-export type Message = RoomMessage | ServerMessage | CoreMessage | ClientMessage
+export type Message<T = Payload> = RoomMessage<T> | ServerMessage<T> | CoreMessage<T> | ClientMessage<T>
