@@ -17,19 +17,19 @@ interface BaseMessage<T = Payload> {
   payload: T;
 }
 
-export interface RoomMessage extends BaseMessage {
+export interface RoomMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'room'>
 }
 
-export interface ServerMessage extends BaseMessage {
+export interface ServerMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'server'>
 }
 
-export interface CoreMessage extends BaseMessage {
+export interface CoreMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'core'>
 }
 
-export interface ClientMessage extends BaseMessage {
+export interface ClientMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'client'>
 }
 
