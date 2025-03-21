@@ -1,4 +1,9 @@
-import type { Payload } from "./payload";
+import type { Payload, RoomPayload } from "./payload";
+
+interface Action<T = string> {
+  handler: T;
+  type: string;
+}
 
 /**
  * Message
@@ -7,10 +12,17 @@ import type { Payload } from "./payload";
  * @param action.type payloadを処理するタイプを指定します。
  * @param payload 処理内容を記述します。
  */
-export interface Message<T = Payload> {
-  action: {
-    handler: string;
-    type: string;
-  };
+interface BaseMessage<T = Payload> {
+  action: Action;
   payload: T;
 }
+
+export interface RoomMessage extends BaseMessage {
+  action: Action<'room'>
+}
+
+export interface ServerMessage extends BaseMessage {
+  action: Action<'server'>
+}
+
+export type Message = RoomMessage | ServerMessage
