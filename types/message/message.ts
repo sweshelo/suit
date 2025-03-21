@@ -17,7 +17,7 @@ interface BaseMessage<T = Payload> {
   payload: T;
 }
 
-export interface RoomMessage<T = RoomPayload> extends BaseMessage<T> {
+export interface RoomMessage extends BaseMessage<RoomPayload> {
   action: Action<'room'>
 }
 
@@ -33,4 +33,4 @@ export interface ClientMessage<T = Payload> extends BaseMessage<T> {
   action: Action<'client'>
 }
 
-export type Message<T = Payload> = RoomMessage<T> | ServerMessage<T> | CoreMessage<T> | ClientMessage<T>
+export type Message<T = Payload> = RoomMessage | ServerMessage<T> | CoreMessage<T> | ClientMessage<T>
