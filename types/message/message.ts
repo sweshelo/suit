@@ -25,4 +25,12 @@ export interface ServerMessage extends BaseMessage {
   action: Action<'server'>
 }
 
-export type Message = RoomMessage | ServerMessage
+export interface CoreMessage extends BaseMessage {
+  action: Action<'core'>
+}
+
+export interface ClientMessage extends BaseMessage {
+  action: Action<'client'>
+}
+
+export type Message = RoomMessage | ServerMessage | CoreMessage | ClientMessage
