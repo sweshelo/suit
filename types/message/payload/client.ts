@@ -1,4 +1,4 @@
-import type { IAtom } from "../../card";
+import type { IAtom } from "../../game/card";
 import type { BasePayload } from "./base";
 
 interface PlayerStats {
