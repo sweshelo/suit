@@ -1,13 +1,5 @@
-import type { IAtom } from '../../game/card'
+import type { IPlayer } from '../../game'
 import type { BasePayload } from './base'
-
-interface PlayerStats {
-  id: string
-  name: string
-  deck: IAtom[]
-  hand: IAtom[]
-  field: IAtom[]
-}
 
 interface GameStats {
   round: number
@@ -18,6 +10,6 @@ export interface SyncPayload extends BasePayload {
   type: 'Sync'
   body: {
     game: GameStats
-    players: Array<{ [key: string]: PlayerStats }>
+    players: { [key: string]: IPlayer }
   }
 }
