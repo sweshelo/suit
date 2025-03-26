@@ -1,5 +1,5 @@
-import type { IAtom } from "../../game/card";
-import type { BasePayload } from "./base";
+import type { IAtom } from '../../game/card'
+import type { BasePayload } from './base'
 
 interface PlayerStats {
   id: string
@@ -15,9 +15,9 @@ interface GameStats {
 }
 
 export interface SyncPayload extends BasePayload {
-  type: 'Sync';
+  type: 'Sync'
   body: {
     game: GameStats
-    players: ({ [key: string]: PlayerStats })[]
-  };
+    players: Array<{ [key: string]: PlayerStats }>
+  }
 }

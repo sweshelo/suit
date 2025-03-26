@@ -1,7 +1,7 @@
-import type { BasePayload } from "./base";
+import type { BasePayload } from './base'
 
 export interface RoomPayload extends BasePayload {
-  roomId: string;
+  roomId: string
 }
 
 /**
@@ -10,9 +10,8 @@ export interface RoomPayload extends BasePayload {
 export interface PlayerEntryPayload extends RoomPayload {
   type: 'PlayerEntry'
   player: {
-    name: string;
-    id: string;
+    name: string
+    id: string
     deck: string[]
   }
 }
-

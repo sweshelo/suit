@@ -1,4 +1,4 @@
-import type { IAtom, IUnit } from "../card"
+import type { IAtom, IUnit } from '../card'
 
 export interface IPlayer {
   id: string
