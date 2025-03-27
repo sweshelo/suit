@@ -6,4 +6,12 @@ export interface IPlayer {
   deck: IAtom[]
   hand: IAtom[]
   field: IUnit[]
+  cp: {
+    current: number
+    max: number
+  }
+  life: {
+    current: number
+    max: number
+  }
 }
