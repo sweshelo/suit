@@ -4,6 +4,7 @@ export interface IAtom {
 
 export interface ICard extends IAtom {
   catalogId: string
+  lv: number
 }
 
 export interface IUnit extends ICard {
