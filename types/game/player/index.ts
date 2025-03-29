@@ -1,4 +1,4 @@
-import type { IAtom, IUnit } from '../card'
+import type { IAtom, ICard, IUnit } from '../card'
 
 export interface IPlayer {
   id: string
@@ -6,6 +6,7 @@ export interface IPlayer {
   deck: IAtom[]
   hand: IAtom[]
   field: IUnit[]
+  trash: ICard[]
   cp: {
     current: number
     max: number
