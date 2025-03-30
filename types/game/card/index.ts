@@ -12,14 +12,20 @@ export interface IUnit extends ICard {
 }
 
 export interface Catalog {
-  id: string
+  id: number
+  ref: string
   name: string
+  rarity: 'c' | 'uc' | 'r' | 'vr' | 'sr' | 'pr' | 'sp'
   cost: number
   color: number
   bp?: [number, number, number]
   ability: string
+  originality: number
+  img: string
   type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit'
   species?: string[]
-  version?: string
-  img: string
+  info: {
+    version: number
+    number: number
+  }
 }
