@@ -12,3 +12,9 @@ export interface OverridePayload extends BasePayload {
   target: IAtom
   parent: IAtom
 }
+
+export interface UnitDrivePayload extends BasePayload {
+  type: 'UnitDrive'
+  player: string
+  target: IAtom
+}
