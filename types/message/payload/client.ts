@@ -1,9 +1,20 @@
 import type { IPlayer } from '../../game'
 import type { BasePayload } from './base'
+import type { IAtom } from '../../game/card'
 
 interface GameStats {
   round: number
   turn: number
+}
+
+/**
+ * 効果選択応答Payload
+ * カード効果によるユーザー選択への応答を表す
+ */
+export interface EffectResponsePayload extends BasePayload {
+  type: 'EffectResponse'
+  promptId: string
+  choice: any
 }
 
 export interface SyncPayload extends BasePayload {
