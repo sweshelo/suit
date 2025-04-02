@@ -17,6 +17,14 @@ export interface EffectResponsePayload extends BasePayload {
   choice: any
 }
 
+export interface DisplayEffectPayload extends BasePayload {
+  type: 'DisplayResponse'
+  promptId: string
+  stackId: string // これがなにか分かってない
+  title: string
+  message: string
+}
+
 export interface SyncPayload extends BasePayload {
   type: 'Sync'
   body: {
