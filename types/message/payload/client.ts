@@ -1,6 +1,5 @@
 import type { IPlayer } from '../../game'
 import type { BasePayload } from './base'
-import type { IAtom } from '../../game/card'
 
 interface GameStats {
   round: number
@@ -14,15 +13,21 @@ interface GameStats {
 export interface EffectResponsePayload extends BasePayload {
   type: 'EffectResponse'
   promptId: string
-  choice: any
+  choice: string
 }
 
 export interface DisplayEffectPayload extends BasePayload {
-  type: 'DisplayResponse'
+  type: 'DisplayEffect'
   promptId: string
   stackId: string // これがなにか分かってない
   title: string
   message: string
+}
+
+export interface ContinuePayload extends BasePayload {
+  type: 'Continue'
+  promptId: string
+  player: string
 }
 
 export interface SyncPayload extends BasePayload {
