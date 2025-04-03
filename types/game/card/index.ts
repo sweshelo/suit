@@ -27,11 +27,4 @@ export interface Catalog {
     version: number
     number: number
   }
-  
-  // カード効果ハンドラ
-  onDrive?: Function
-  onBreak?: Function
-  onDamage?: Function
-  onDraw?: Function
-  [key: string]: any // 動的なハンドラ名に対応するためのインデックスシグネチャ
 }
