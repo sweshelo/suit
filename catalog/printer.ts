@@ -35,6 +35,7 @@ async function main() {
   let cards: any[] = [];
   for await (const url of pages) {
     const response = await fetch(`${base}${url}`)
+    // @ts-expect-error unknownだけど絶対Cardが返るはず
     const { card: _cards } = await response.json()
     cards = [...cards, ..._cards]
   }
