@@ -3,7 +3,6 @@ import type {
   ContinuePayload,
   DebugPrintPayload,
   DisplayEffectPayload,
-  EffectResponsePayload,
   SyncPayload,
 } from './client';
 import type { ChoosePayload, DebugDrawPayload, OverridePayload, UnitDrivePayload } from './core';
@@ -24,7 +23,6 @@ export type Payload =
   | DebugDrawPayload
   | OverridePayload
   | UnitDrivePayload
-  | EffectResponsePayload
   | DisplayEffectPayload
   | ContinuePayload
   | DebugPrintPayload

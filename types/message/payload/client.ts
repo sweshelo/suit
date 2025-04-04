@@ -7,16 +7,6 @@ interface GameStats {
   turn: number;
 }
 
-/**
- * 効果選択応答Payload
- * カード効果によるユーザー選択への応答を表す
- */
-export interface EffectResponsePayload extends BasePayload {
-  type: 'EffectResponse';
-  promptId: string;
-  choice: string;
-}
-
 export interface DisplayEffectPayload extends BasePayload {
   type: 'DisplayEffect';
   promptId: string;

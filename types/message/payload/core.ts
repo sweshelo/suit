@@ -19,8 +19,12 @@ export interface UnitDrivePayload extends BasePayload {
   target: IAtom;
 }
 
+/**
+ * プレイヤーが選択肢を選んだときに送信されるPayload
+ * (<-> ChoicesResponse: 選択肢をClientに提示するPayload)
+ */
 export interface ChoosePayload extends BasePayload {
   type: 'Choose';
   promptId: string;
-  choice: string;
+  choice: string[];
 }
