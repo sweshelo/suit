@@ -18,3 +18,9 @@ export interface UnitDrivePayload extends BasePayload {
   player: string
   target: IAtom
 }
+
+export interface ChoosePayload extends BasePayload {
+  type: 'Choose'
+  promptId: string
+  choice: string
+}

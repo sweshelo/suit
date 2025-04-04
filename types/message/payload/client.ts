@@ -1,4 +1,5 @@
 import type { IPlayer } from '../../game'
+import type { Choices } from '../../game/system'
 import type { BasePayload } from './base'
 
 interface GameStats {
@@ -24,10 +25,22 @@ export interface DisplayEffectPayload extends BasePayload {
   message: string
 }
 
+export interface DebugPrintPayload extends BasePayload {
+  type: 'DebugPrint'
+  message: string | object
+}
+
 export interface ContinuePayload extends BasePayload {
   type: 'Continue'
   promptId: string
   player: string
+}
+
+export interface ChoisePayload extends BasePayload {
+  type: 'Choise'
+  promptId: string
+  player: string
+  choices: Choices
 }
 
 export interface SyncPayload extends BasePayload {
