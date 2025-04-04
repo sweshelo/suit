@@ -1,4 +1,11 @@
-import type { ChoisePayload, ContinuePayload, DebugPrintPayload, DisplayEffectPayload, EffectResponsePayload, SyncPayload } from './client'
+import type {
+  ChoisePayload,
+  ContinuePayload,
+  DebugPrintPayload,
+  DisplayEffectPayload,
+  EffectResponsePayload,
+  SyncPayload,
+} from './client'
 import type { ChoosePayload, DebugDrawPayload, OverridePayload, UnitDrivePayload } from './core'
 import type { PlayerEntryPayload } from './room'
 import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server'
@@ -9,4 +16,17 @@ export type * from './server'
 export type * from './client'
 export type * from './core'
 
-export type Payload = RoomOpenRequestPayload | RoomOpenResponsePayload | PlayerEntryPayload | SyncPayload | DebugDrawPayload | OverridePayload | UnitDrivePayload | EffectResponsePayload | DisplayEffectPayload | ContinuePayload | DebugPrintPayload | ChoosePayload | ChoisePayload
+export type Payload =
+  | RoomOpenRequestPayload
+  | RoomOpenResponsePayload
+  | PlayerEntryPayload
+  | SyncPayload
+  | DebugDrawPayload
+  | OverridePayload
+  | UnitDrivePayload
+  | EffectResponsePayload
+  | DisplayEffectPayload
+  | ContinuePayload
+  | DebugPrintPayload
+  | ChoosePayload
+  | ChoisePayload

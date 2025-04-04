@@ -1,5 +1,5 @@
-import type { IAtom } from "../../game";
-import type { BasePayload } from "./base";
+import type { IAtom } from '../../game'
+import type { BasePayload } from './base'
 
 export interface DebugDrawPayload extends BasePayload {
   type: 'DebugDraw'

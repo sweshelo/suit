@@ -5,7 +5,7 @@ import type {
   ResponsePayload,
   RoomOpenRequestPayload,
   RoomOpenResponsePayload,
-  PlayerEntryPayload
+  PlayerEntryPayload,
 } from './payload'
 
 /**
@@ -80,9 +80,9 @@ export type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Messa
  * ペイロードタイプに基づいた型推論のためのユーティリティ型
  */
 export interface PayloadTypeToPayload {
-  'RoomOpenRequest': RoomOpenRequestPayload
-  'RoomOpenResponse': RoomOpenResponsePayload
-  'PlayerEntry': PlayerEntryPayload
+  RoomOpenRequest: RoomOpenRequestPayload
+  RoomOpenResponse: RoomOpenResponsePayload
+  PlayerEntry: PlayerEntryPayload
   // 他のペイロードタイプも必要に応じて追加
 }
 
@@ -98,9 +98,9 @@ export type PayloadFromType<T extends string> = T extends keyof PayloadTypeToPay
  * 例: 'open'アクションタイプは'RoomOpenRequest'ペイロードタイプと関連付けられる
  */
 export interface ActionTypeToPayloadType {
-  'open': 'RoomOpenRequest'
-  'response': 'RoomOpenResponse'
-  'join': 'PlayerEntry'
+  open: 'RoomOpenRequest'
+  response: 'RoomOpenResponse'
+  join: 'PlayerEntry'
   // 他のアクションタイプとペイロードタイプの関連付けも必要に応じて追加
 }
 
@@ -110,7 +110,7 @@ export interface ActionTypeToPayloadType {
 export const actionTypeToPayloadType: ActionTypeToPayloadType = {
   open: 'RoomOpenRequest',
   response: 'RoomOpenResponse',
-  join: 'PlayerEntry'
+  join: 'PlayerEntry',
 }
 
 /**
@@ -122,8 +122,9 @@ export type PayloadTypeFromActionType<T extends keyof ActionTypeToPayloadType> =
 /**
  * アクションタイプから具体的なペイロード型を取得
  */
-export type PayloadFromActionType<T extends keyof ActionTypeToPayloadType> =
-  PayloadFromType<PayloadTypeFromActionType<T>>
+export type PayloadFromActionType<T extends keyof ActionTypeToPayloadType> = PayloadFromType<
+  PayloadTypeFromActionType<T>
+>
 
 /**
  * 型安全なメッセージ作成のためのヘルパー関数
@@ -144,11 +145,8 @@ export type PayloadFromActionType<T extends keyof ActionTypeToPayloadType> =
 export function createMessage<
   H extends HandlerType,
   T extends ActionType,
-  P extends Payload
-> (message: {
-  action: Action<H, T>
-  payload: P
-}): Message<P> {
+  P extends Payload,
+>(message: { action: Action<H, T>; payload: P }): Message<P> {
   return message
 }
 
@@ -169,8 +167,8 @@ export function createMessage<
  */
 export function createMessageFromActionType<
   H extends HandlerType,
-  T extends keyof ActionTypeToPayloadType
-> (message: {
+  T extends keyof ActionTypeToPayloadType,
+>(message: {
   action: Action<H, T>
   payload: Omit<PayloadFromActionType<T>, 'type'>
 }): Message<PayloadFromActionType<T>> {
@@ -178,7 +176,7 @@ export function createMessageFromActionType<
     action: message.action,
     payload: {
       ...message.payload,
-      type: actionTypeToPayloadType[message.action.type]
-    } as PayloadFromActionType<T>
+      type: actionTypeToPayloadType[message.action.type],
+    } as PayloadFromActionType<T>,
   }
 }

@@ -1,4 +1,4 @@
-import type { ICard } from "../card"
+import type { ICard } from '../card'
 
 interface Option {
   id: string
@@ -7,10 +7,13 @@ interface Option {
 
 export type Choices = {
   title: string
-} & ({
-  type: 'card'
-  items: ICard[]
-} | {
-  type: 'option'
-  items: Option[]
-})
+} & (
+  | {
+      type: 'card'
+      items: ICard[]
+    }
+  | {
+      type: 'option'
+      items: Option[]
+    }
+)
