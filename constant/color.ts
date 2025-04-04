@@ -5,4 +5,4 @@ export const Color = {
   GREEN: 4,
   PURPLE: 5,
   NONE: 6,
-}
+};

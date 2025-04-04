@@ -6,19 +6,19 @@ import type {
   RoomOpenRequestPayload,
   RoomOpenResponsePayload,
   PlayerEntryPayload,
-} from './payload'
+} from './payload';
 
 /**
  * ハンドラータイプ
  * payloadを処理させる対象を指定します。
  */
-export type HandlerType = 'server' | 'room' | 'core' | 'client'
+export type HandlerType = 'server' | 'room' | 'core' | 'client';
 
 /**
  * アクションタイプ
  * payloadを処理するタイプを指定します。
  */
-export type ActionType = string
+export type ActionType = string;
 
 /**
  * Action
@@ -27,8 +27,8 @@ export type ActionType = string
  * @param type payloadを処理するタイプを指定します。
  */
 export interface Action<H extends HandlerType = HandlerType, T extends ActionType = ActionType> {
-  handler: H
-  type: T
+  handler: H;
+  type: T;
 }
 
 /**
@@ -41,48 +41,48 @@ export interface Action<H extends HandlerType = HandlerType, T extends ActionTyp
  * @param payload 処理内容を記述します
  */
 export interface Message<P = Payload> {
-  action: Action
-  payload: P
+  action: Action;
+  payload: P;
 }
 
 /**
  * 特定のハンドラーに対するメッセージ型
  */
 export interface RoomMessage<P = RoomPayload> extends Message<P> {
-  action: Action<'room'>
+  action: Action<'room'>;
 }
 
 export interface ServerMessage<P = Payload> extends Message<P> {
-  action: Action<'server'>
+  action: Action<'server'>;
 }
 
 export interface CoreMessage<P = Payload> extends Message<P> {
-  action: Action<'core'>
+  action: Action<'core'>;
 }
 
 export interface ClientMessage<P = Payload> extends Message<P> {
-  action: Action<'client'>
+  action: Action<'client'>;
 }
 
 /**
  * リクエスト用のメッセージ型
  * RequestPayloadを拡張したペイロードを持つメッセージ
  */
-export type RequestMessage<P extends RequestPayload = RequestPayload> = Message<P>
+export type RequestMessage<P extends RequestPayload = RequestPayload> = Message<P>;
 
 /**
  * レスポンス用のメッセージ型
  * ResponsePayloadを拡張したペイロードを持つメッセージ
  */
-export type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Message<P>
+export type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Message<P>;
 
 /**
  * ペイロードタイプに基づいた型推論のためのユーティリティ型
  */
 export interface PayloadTypeToPayload {
-  RoomOpenRequest: RoomOpenRequestPayload
-  RoomOpenResponse: RoomOpenResponsePayload
-  PlayerEntry: PlayerEntryPayload
+  RoomOpenRequest: RoomOpenRequestPayload;
+  RoomOpenResponse: RoomOpenResponsePayload;
+  PlayerEntry: PlayerEntryPayload;
   // 他のペイロードタイプも必要に応じて追加
 }
 
@@ -91,16 +91,16 @@ export interface PayloadTypeToPayload {
  */
 export type PayloadFromType<T extends string> = T extends keyof PayloadTypeToPayload
   ? PayloadTypeToPayload[T]
-  : never
+  : never;
 
 /**
  * アクションタイプとペイロードタイプの関連付け
  * 例: 'open'アクションタイプは'RoomOpenRequest'ペイロードタイプと関連付けられる
  */
 export interface ActionTypeToPayloadType {
-  open: 'RoomOpenRequest'
-  response: 'RoomOpenResponse'
-  join: 'PlayerEntry'
+  open: 'RoomOpenRequest';
+  response: 'RoomOpenResponse';
+  join: 'PlayerEntry';
   // 他のアクションタイプとペイロードタイプの関連付けも必要に応じて追加
 }
 
@@ -111,20 +111,20 @@ export const actionTypeToPayloadType: ActionTypeToPayloadType = {
   open: 'RoomOpenRequest',
   response: 'RoomOpenResponse',
   join: 'PlayerEntry',
-}
+};
 
 /**
  * アクションタイプから関連するペイロードタイプを取得
  */
 export type PayloadTypeFromActionType<T extends keyof ActionTypeToPayloadType> =
-  ActionTypeToPayloadType[T]
+  ActionTypeToPayloadType[T];
 
 /**
  * アクションタイプから具体的なペイロード型を取得
  */
 export type PayloadFromActionType<T extends keyof ActionTypeToPayloadType> = PayloadFromType<
   PayloadTypeFromActionType<T>
->
+>;
 
 /**
  * 型安全なメッセージ作成のためのヘルパー関数
@@ -147,7 +147,7 @@ export function createMessage<
   T extends ActionType,
   P extends Payload,
 >(message: { action: Action<H, T>; payload: P }): Message<P> {
-  return message
+  return message;
 }
 
 /**
@@ -169,8 +169,8 @@ export function createMessageFromActionType<
   H extends HandlerType,
   T extends keyof ActionTypeToPayloadType,
 >(message: {
-  action: Action<H, T>
-  payload: Omit<PayloadFromActionType<T>, 'type'>
+  action: Action<H, T>;
+  payload: Omit<PayloadFromActionType<T>, 'type'>;
 }): Message<PayloadFromActionType<T>> {
   return {
     action: message.action,
@@ -178,5 +178,5 @@ export function createMessageFromActionType<
       ...message.payload,
       type: actionTypeToPayloadType[message.action.type],
     } as PayloadFromActionType<T>,
-  }
+  };
 }

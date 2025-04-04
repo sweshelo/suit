@@ -1,19 +1,20 @@
-import type { ICard } from '../card'
+import type { ICard } from '../card';
 
 interface Option {
-  id: string
-  description: string
+  id: string;
+  description: string;
 }
 
 export type Choices = {
-  title: string
+  title: string;
 } & (
   | {
-      type: 'card'
-      items: ICard[]
+      type: 'card';
+      items: ICard[];
+      count: number;
     }
   | {
-      type: 'option'
-      items: Option[]
+      type: 'option';
+      items: Option[];
     }
-)
+);

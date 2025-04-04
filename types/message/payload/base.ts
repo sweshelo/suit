@@ -2,7 +2,7 @@
  * exportされるPayloadはUniqueなtypeを持たなければならない。
  */
 export interface BasePayload {
-  type: string
+  type: string;
 }
 
 /**
@@ -11,10 +11,10 @@ export interface BasePayload {
  * @param requestId リクエストを識別するためのUUID
  */
 export interface RequestPayload extends BasePayload {
-  requestId: string
+  requestId: string;
 }
 
 export interface ResponsePayload extends BasePayload {
-  requestId: string
-  result: boolean
+  requestId: string;
+  result: boolean;
 }

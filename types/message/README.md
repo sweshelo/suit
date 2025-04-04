@@ -8,13 +8,13 @@ Message型は以下の基本構造を持っています：
 
 ```typescript
 interface Message<P = Payload> {
-  action: Action
-  payload: P
+  action: Action;
+  payload: P;
 }
 
 interface Action<H extends HandlerType = HandlerType, T extends ActionType = ActionType> {
-  handler: H
-  type: T
+  handler: H;
+  type: T;
 }
 ```
 
@@ -38,7 +38,7 @@ interface Action<H extends HandlerType = HandlerType, T extends ActionType = Act
    function processMessage(message: Message) {
      if (message.payload.type === 'RoomOpenRequest') {
        // この中ではmessage.payloadはRoomOpenRequestPayloadとして推論される
-       console.log(message.payload.name)
+       console.log(message.payload.name);
      }
    }
    ```
@@ -49,27 +49,27 @@ interface Action<H extends HandlerType = HandlerType, T extends ActionType = Act
 
 ```typescript
 interface RoomMessage<P = RoomPayload> extends Message<P> {
-  action: Action<'room'>
+  action: Action<'room'>;
 }
 
 interface ServerMessage<P = Payload> extends Message<P> {
-  action: Action<'server'>
+  action: Action<'server'>;
 }
 
 interface CoreMessage<P = Payload> extends Message<P> {
-  action: Action<'core'>
+  action: Action<'core'>;
 }
 
 interface ClientMessage<P = Payload> extends Message<P> {
-  action: Action<'client'>
+  action: Action<'client'>;
 }
 ```
 
 リクエスト/レスポンス用のメッセージ型：
 
 ```typescript
-type RequestMessage<P extends RequestPayload = RequestPayload> = Message<P>
-type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Message<P>
+type RequestMessage<P extends RequestPayload = RequestPayload> = Message<P>;
+type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Message<P>;
 ```
 
 ## ユーティリティ型と関数
@@ -78,22 +78,22 @@ type ResponseMessage<P extends ResponsePayload = ResponsePayload> = Message<P>
 
 ```typescript
 type ActionTypeToPayloadType = {
-  open: 'RoomOpenRequest'
-  response: 'RoomOpenResponse'
-  join: 'PlayerEntry'
+  open: 'RoomOpenRequest';
+  response: 'RoomOpenResponse';
+  join: 'PlayerEntry';
   // 他のアクションタイプとペイロードタイプの関連付けも必要に応じて追加
-}
+};
 ```
 
 ペイロードタイプに基づいた型推論：
 
 ```typescript
 type PayloadTypeToPayload = {
-  RoomOpenRequest: RoomOpenRequestPayload
-  RoomOpenResponse: RoomOpenResponsePayload
-  PlayerEntry: PlayerEntryPayload
+  RoomOpenRequest: RoomOpenRequestPayload;
+  RoomOpenResponse: RoomOpenResponsePayload;
+  PlayerEntry: PlayerEntryPayload;
   // 他のペイロードタイプも必要に応じて追加
-}
+};
 ```
 
 ## ヘルパー関数
@@ -112,7 +112,7 @@ const message = createMessage({
     name: 'Game Room',
     requestId: '123',
   },
-})
+});
 
 // アクションタイプからペイロードタイプを自動的に設定
 const message = createMessageFromActionType({
@@ -124,7 +124,7 @@ const message = createMessageFromActionType({
     name: 'Game Room',
     requestId: '123',
   },
-})
+});
 ```
 
 ## 使用例

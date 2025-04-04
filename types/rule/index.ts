@@ -1,26 +1,26 @@
 export interface Rule {
   system: {
-    round: number
+    round: number;
     draw: {
-      top: number
-      override: number
-    }
+      top: number;
+      override: number;
+    };
     handicap: {
-      draw: boolean
-      cp: boolean
-    }
+      draw: boolean;
+      cp: boolean;
+    };
     cp: {
-      init: number
-      increase: number
-    }
-  }
+      init: number;
+      increase: number;
+    };
+  };
   player: {
     max: {
-      life: number
-      hand: number
-      trigger: number
-      field: number
-      cp: number
-    }
-  }
+      life: number;
+      hand: number;
+      trigger: number;
+      field: number;
+      cp: number;
+    };
+  };
 }

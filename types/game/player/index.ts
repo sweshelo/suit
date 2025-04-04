@@ -1,18 +1,18 @@
-import type { IAtom, ICard, IUnit } from '../card'
+import type { IAtom, ICard, IUnit } from '../card';
 
 export interface IPlayer {
-  id: string
-  name: string
-  deck: IAtom[]
-  hand: IAtom[]
-  field: IUnit[]
-  trash: ICard[]
+  id: string;
+  name: string;
+  deck: IAtom[];
+  hand: IAtom[];
+  field: IUnit[];
+  trash: ICard[];
   cp: {
-    current: number
-    max: number
-  }
+    current: number;
+    max: number;
+  };
   life: {
-    current: number
-    max: number
-  }
+    current: number;
+    max: number;
+  };
 }
