@@ -7,6 +7,7 @@ export interface IPlayer {
   hand: IAtom[];
   field: IUnit[];
   trash: ICard[];
+  trigger: IAtom[];
   cp: {
     current: number;
     max: number;
