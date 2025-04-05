@@ -8,7 +8,11 @@ export interface ICard extends IAtom {
 }
 
 export interface IUnit extends ICard {
-  bp: number;
+  bp: {
+    base: number
+    diff: number
+  };
+  active: boolean;
 }
 
 export interface Catalog {
