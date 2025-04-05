@@ -1,4 +1,4 @@
-import type { IAtom } from '../../game';
+import type { IAtom, IUnit } from '../../game';
 import type { BasePayload } from './base';
 
 export interface DebugDrawPayload extends BasePayload {
@@ -27,4 +27,9 @@ export interface ChoosePayload extends BasePayload {
   type: 'Choose';
   promptId: string;
   choice: string[];
+}
+
+export interface WithdrawalPayload extends BasePayload {
+  type: 'Withdrawal'
+  target: IUnit
 }
