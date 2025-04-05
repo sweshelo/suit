@@ -11,6 +11,7 @@ export interface IUnit extends ICard {
   bp: {
     base: number
     diff: number
+    damage: number
   };
   active: boolean;
 }
