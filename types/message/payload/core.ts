@@ -1,4 +1,4 @@
-import type { IAtom, IUnit } from '../../game';
+import type { IAtom, ICard, IUnit } from '../../game';
 import type { BasePayload } from './base';
 
 export interface DebugDrawPayload extends BasePayload {
@@ -39,4 +39,28 @@ export interface ContinuePayload extends BasePayload {
   type: 'Continue';
   promptId: string;
   player: string;
+}
+
+export interface TriggerSetPayload extends BasePayload {
+  type: 'TriggerSet';
+  player: string;
+  target: ICard;
+}
+
+export interface AttackPayload extends BasePayload {
+  type: 'Attack'
+  player: string
+  target: IUnit
+}
+
+export interface BootPayload extends BasePayload {
+  type: 'Boot'
+  player: string
+  target: IUnit
+}
+
+export interface DiscardPayload extends BasePayload {
+  type: 'Discard'
+  player: string
+  target: ICard
 }

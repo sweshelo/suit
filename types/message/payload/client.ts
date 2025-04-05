@@ -38,3 +38,13 @@ export interface SyncPayload extends BasePayload {
     players: { [key: string]: IPlayer };
   };
 }
+
+export interface VisualEffectPayload extends BasePayload {
+  type: 'VisualEffect'
+  body: object
+}
+
+export interface SoundEffectPayload extends BasePayload {
+  type: 'SoundEffect'
+  soundId: string
+}
