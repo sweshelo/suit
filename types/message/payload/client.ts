@@ -1,3 +1,7 @@
+/**
+ * client.ts: Clientに対して送信するPayloadを記述
+ */
+
 import type { IPlayer } from '../../game';
 import type { Choices } from '../../game/system';
 import type { BasePayload } from './base';
@@ -18,12 +22,6 @@ export interface DisplayEffectPayload extends BasePayload {
 export interface DebugPrintPayload extends BasePayload {
   type: 'DebugPrint';
   message: string | object;
-}
-
-export interface ContinuePayload extends BasePayload {
-  type: 'Continue';
-  promptId: string;
-  player: string;
 }
 
 export interface ChoicesPayload extends BasePayload {

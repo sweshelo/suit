@@ -34,3 +34,9 @@ export interface WithdrawalPayload extends BasePayload {
   player: string
   target: IUnit
 }
+
+export interface ContinuePayload extends BasePayload {
+  type: 'Continue';
+  promptId: string;
+  player: string;
+}
