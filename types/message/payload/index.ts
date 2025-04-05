@@ -5,7 +5,7 @@ import type {
   DisplayEffectPayload,
   SyncPayload,
 } from './client';
-import type { ChoosePayload, DebugDrawPayload, OverridePayload, UnitDrivePayload } from './core';
+import type { ChoosePayload, DebugDrawPayload, OverridePayload, UnitDrivePayload, WithdrawalPayload } from './core';
 import type { PlayerEntryPayload } from './room';
 import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server';
 
@@ -26,5 +26,6 @@ export type Payload =
   | DisplayEffectPayload
   | ContinuePayload
   | DebugPrintPayload
+  | WithdrawalPayload
   | ChoosePayload
   | ChoicesPayload;

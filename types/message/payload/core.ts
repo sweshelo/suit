@@ -31,5 +31,6 @@ export interface ChoosePayload extends BasePayload {
 
 export interface WithdrawalPayload extends BasePayload {
   type: 'Withdrawal'
+  player: string
   target: IUnit
 }
