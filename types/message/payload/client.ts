@@ -4,6 +4,7 @@
 
 import type { IPlayer } from '../../game';
 import type { Choices } from '../../game/system';
+import type { Rule } from '../../rule';
 import type { BasePayload } from './base';
 
 interface GameStats {
@@ -34,6 +35,7 @@ export interface ChoicesPayload extends BasePayload {
 export interface SyncPayload extends BasePayload {
   type: 'Sync';
   body: {
+    rule: Rule
     game: GameStats;
     players: { [key: string]: IPlayer };
   };

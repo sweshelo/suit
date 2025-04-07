@@ -23,4 +23,17 @@ export interface Rule {
       cp: number;
     };
   };
+  debug?: {
+    mask: {
+      opponent: {
+        deck: boolean
+        hand: boolean
+        trigger: boolean
+        trash: boolean
+      }
+      self: {
+        deck: boolean
+      }
+    }
+  }
 }
