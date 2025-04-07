@@ -24,7 +24,7 @@ export interface Rule {
     };
   };
   debug?: {
-    mask: {
+    reveal: {
       opponent: {
         deck: boolean
         hand: boolean
