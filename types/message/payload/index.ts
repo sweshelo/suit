@@ -2,7 +2,9 @@ import type {
   ChoicesPayload,
   DebugPrintPayload,
   DisplayEffectPayload,
+  SoundEffectPayload,
   SyncPayload,
+  VisualEffectPayload,
 } from './client';
 import type {
   ChoosePayload,
@@ -36,4 +38,6 @@ export type Payload =
   | WithdrawalPayload
   | ChoosePayload
   | ChoicesPayload
-  | TriggerSetPayload;
+  | TriggerSetPayload
+  | VisualEffectPayload
+  | SoundEffectPayload;
