@@ -30,9 +30,9 @@ export interface ChoosePayload extends BasePayload {
 }
 
 export interface WithdrawalPayload extends BasePayload {
-  type: 'Withdrawal'
-  player: string
-  target: IUnit
+  type: 'Withdrawal';
+  player: string;
+  target: IUnit;
 }
 
 export interface ContinuePayload extends BasePayload {
@@ -48,19 +48,19 @@ export interface TriggerSetPayload extends BasePayload {
 }
 
 export interface AttackPayload extends BasePayload {
-  type: 'Attack'
-  player: string
-  target: IUnit
+  type: 'Attack';
+  player: string;
+  target: IUnit;
 }
 
 export interface BootPayload extends BasePayload {
-  type: 'Boot'
-  player: string
-  target: IUnit
+  type: 'Boot';
+  player: string;
+  target: IUnit;
 }
 
 export interface DiscardPayload extends BasePayload {
-  type: 'Discard'
-  player: string
-  target: ICard
+  type: 'Discard';
+  player: string;
+  target: ICard;
 }

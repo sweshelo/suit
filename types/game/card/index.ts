@@ -9,9 +9,9 @@ export interface ICard extends IAtom {
 
 export interface IUnit extends ICard {
   bp: {
-    base: number
-    diff: number
-    damage: number
+    base: number;
+    diff: number;
+    damage: number;
   };
   active: boolean;
 }

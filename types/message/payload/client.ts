@@ -40,11 +40,11 @@ export interface SyncPayload extends BasePayload {
 }
 
 export interface VisualEffectPayload extends BasePayload {
-  type: 'VisualEffect'
-  body: object
+  type: 'VisualEffect';
+  body: object;
 }
 
 export interface SoundEffectPayload extends BasePayload {
-  type: 'SoundEffect'
-  soundId: string
+  type: 'SoundEffect';
+  soundId: string;
 }

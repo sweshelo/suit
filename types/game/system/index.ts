@@ -8,17 +8,17 @@ interface Option {
 export type Choices = {
   title: string;
 } & (
-    | {
+  | {
       type: 'card';
       items: ICard[];
       count: number;
     }
-    | {
+  | {
       type: 'option';
       items: Option[];
     }
-    | {
+  | {
       type: 'intercept';
       items: ICard[];
     }
-  );
+);

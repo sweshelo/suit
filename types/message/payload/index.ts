@@ -4,7 +4,15 @@ import type {
   DisplayEffectPayload,
   SyncPayload,
 } from './client';
-import type { ChoosePayload, ContinuePayload, DebugDrawPayload, OverridePayload, TriggerSetPayload, UnitDrivePayload, WithdrawalPayload } from './core';
+import type {
+  ChoosePayload,
+  ContinuePayload,
+  DebugDrawPayload,
+  OverridePayload,
+  TriggerSetPayload,
+  UnitDrivePayload,
+  WithdrawalPayload,
+} from './core';
 import type { PlayerEntryPayload } from './room';
 import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server';
 
