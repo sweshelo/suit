@@ -26,14 +26,14 @@ export interface Rule {
   debug?: {
     reveal: {
       opponent: {
-        deck: boolean
-        hand: boolean
-        trigger: boolean
-        trash: boolean
-      }
+        deck: boolean;
+        hand: boolean;
+        trigger: boolean;
+        trash: boolean;
+      };
       self: {
-        deck: boolean
-      }
-    }
-  }
+        deck: boolean;
+      };
+    };
+  };
 }

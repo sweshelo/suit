@@ -35,7 +35,7 @@ export interface ChoicesPayload extends BasePayload {
 export interface SyncPayload extends BasePayload {
   type: 'Sync';
   body: {
-    rule: Rule
+    rule: Rule;
     game: GameStats;
     players: { [key: string]: IPlayer };
   };
