@@ -18,6 +18,7 @@ export interface DisplayEffectPayload extends BasePayload {
   stackId: string; // これがなにか分かってない
   title: string;
   message: string;
+  unitId: string | undefined
 }
 
 export interface DebugPrintPayload extends BasePayload {
