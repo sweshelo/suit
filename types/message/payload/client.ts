@@ -51,3 +51,8 @@ export interface SoundEffectPayload extends BasePayload {
   type: 'SoundEffect';
   soundId: string;
 }
+
+export interface OperationPayload extends BasePayload {
+  type: 'Operation'
+  action: 'freeze' | 'defrost'
+}

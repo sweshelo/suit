@@ -2,6 +2,7 @@ import type {
   ChoicesPayload,
   DebugPrintPayload,
   DisplayEffectPayload,
+  OperationPayload,
   SoundEffectPayload,
   SyncPayload,
   VisualEffectPayload,
@@ -40,4 +41,5 @@ export type Payload =
   | ChoicesPayload
   | TriggerSetPayload
   | VisualEffectPayload
-  | SoundEffectPayload;
+  | SoundEffectPayload
+  | OperationPayload;
