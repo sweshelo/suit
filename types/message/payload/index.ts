@@ -5,6 +5,7 @@ import type {
   OperationPayload,
   SoundEffectPayload,
   SyncPayload,
+  TurnEndPayload,
   VisualEffectPayload,
 } from './client';
 import type {
@@ -42,4 +43,5 @@ export type Payload =
   | TriggerSetPayload
   | VisualEffectPayload
   | SoundEffectPayload
-  | OperationPayload;
+  | OperationPayload
+  | TurnEndPayload;

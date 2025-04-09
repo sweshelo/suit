@@ -56,3 +56,7 @@ export interface OperationPayload extends BasePayload {
   type: 'Operation'
   action: 'freeze' | 'defrost'
 }
+
+export interface TurnEndPayload extends BasePayload {
+  type: 'TurnEnd'
+}
