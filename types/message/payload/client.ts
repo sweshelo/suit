@@ -44,7 +44,12 @@ export interface SyncPayload extends BasePayload {
 
 export interface VisualEffectPayload extends BasePayload {
   type: 'VisualEffect';
-  body: object;
+  body: {
+    effect: 'drive';
+    type: "UNIT" | "EVOLVE" | "INTERCEPT" | "TRIGGER" | "JOKER"
+    player: string
+    image: string
+  };
 }
 
 export interface SoundEffectPayload extends BasePayload {
