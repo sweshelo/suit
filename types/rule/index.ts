@@ -13,6 +13,8 @@ export interface Rule {
     cp: {
       init: number;
       increase: number;
+      max: number,
+      ceil: number,
     };
   };
   player: {
@@ -21,7 +23,6 @@ export interface Rule {
       hand: number;
       trigger: number;
       field: number;
-      cp: number;
     };
   };
   misc: {
