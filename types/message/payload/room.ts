@@ -1,9 +1,7 @@
-import type { Rule } from '../../rule';
 import type { BasePayload } from './base';
 
 export interface RoomPayload extends BasePayload {
   roomId: string;
-  rule?: Rule
 }
 
 /**
