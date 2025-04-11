@@ -4,6 +4,7 @@ export interface Rule {
     draw: {
       top: number;
       override: number;
+      mulligan: number;
     };
     handicap: {
       draw: boolean;
@@ -22,6 +23,10 @@ export interface Rule {
       field: number;
       cp: number;
     };
+  };
+  misc: {
+    strictOverride: boolean;
+    suicideJoker: boolean;
   };
   debug?: {
     reveal: {
