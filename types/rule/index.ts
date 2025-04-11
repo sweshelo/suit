@@ -9,12 +9,14 @@ export interface Rule {
     handicap: {
       draw: boolean;
       cp: boolean;
+      attack: boolean;
     };
     cp: {
       init: number;
       increase: number;
       max: number,
       ceil: number,
+      carryover: boolean;
     };
   };
   player: {
@@ -30,6 +32,7 @@ export interface Rule {
     suicideJoker: boolean;
   };
   debug?: {
+    enable: boolean;
     reveal: {
       opponent: {
         deck: boolean;
