@@ -9,9 +9,12 @@ import type {
   VisualEffectPayload,
 } from './client';
 import type {
+  AttackPayload,
+  BootPayload,
   ChoosePayload,
   ContinuePayload,
   DebugDrawPayload,
+  DiscardPayload,
   OverridePayload,
   TriggerSetPayload,
   UnitDrivePayload,
@@ -44,4 +47,7 @@ export type Payload =
   | VisualEffectPayload
   | SoundEffectPayload
   | OperationPayload
-  | TurnEndPayload;
+  | TurnEndPayload
+  | AttackPayload
+  | BootPayload
+  | DiscardPayload;
