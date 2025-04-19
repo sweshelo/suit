@@ -14,8 +14,8 @@ export interface Rule {
     cp: {
       init: number;
       increase: number;
-      max: number,
-      ceil: number,
+      max: number;
+      ceil: number;
       carryover: boolean;
     };
   };

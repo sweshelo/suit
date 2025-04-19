@@ -18,7 +18,7 @@ export interface DisplayEffectPayload extends BasePayload {
   stackId: string; // これがなにか分かってない
   title: string;
   message: string;
-  unitId: string | undefined
+  unitId: string | undefined;
 }
 
 export interface DebugPrintPayload extends BasePayload {
@@ -46,9 +46,9 @@ export interface VisualEffectPayload extends BasePayload {
   type: 'VisualEffect';
   body: {
     effect: 'drive';
-    type: "UNIT" | "EVOLVE" | "INTERCEPT" | "TRIGGER" | "JOKER"
-    player: string
-    image: string
+    type: 'UNIT' | 'EVOLVE' | 'INTERCEPT' | 'TRIGGER' | 'JOKER';
+    player: string;
+    image: string;
   };
 }
 
@@ -58,10 +58,10 @@ export interface SoundEffectPayload extends BasePayload {
 }
 
 export interface OperationPayload extends BasePayload {
-  type: 'Operation'
-  action: 'freeze' | 'defrost'
+  type: 'Operation';
+  action: 'freeze' | 'defrost';
 }
 
 export interface TurnEndPayload extends BasePayload {
-  type: 'TurnEnd'
+  type: 'TurnEnd';
 }
