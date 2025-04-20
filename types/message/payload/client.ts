@@ -42,15 +42,31 @@ export interface SyncPayload extends BasePayload {
   };
 }
 
-export interface VisualEffectPayload extends BasePayload {
-  type: 'VisualEffect';
-  body: {
-    effect: 'drive';
-    type: 'UNIT' | 'EVOLVE' | 'INTERCEPT' | 'TRIGGER' | 'JOKER';
-    player: string;
-    image: string;
-  };
-}
+export type VisualEffectPayload =
+  | ({
+      type: 'VisualEffect';
+      body: {
+        effect: 'drive';
+        type: 'UNIT' | 'EVOLVE' | 'INTERCEPT' | 'TRIGGER' | 'JOKER';
+        player: string;
+        image: string;
+      };
+    })
+  | ({
+      type: 'VisualEffect';
+      body: {
+        effect: 'attack';
+        attackerId: string;
+      };
+    })
+  | ({
+      type: 'VisualEffect';
+      body: {
+        effect: 'launch';
+        attackerId: string;
+        blockerId?: string;
+      };
+    });
 
 export interface SoundEffectPayload extends BasePayload {
   type: 'SoundEffect';
