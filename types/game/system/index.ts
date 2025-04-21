@@ -25,4 +25,8 @@ export type Choices = {
       type: 'unit';
       items: IUnit[];
     }
+  | {
+    type: 'block';
+    items: IUnit[];
+  }
 );
