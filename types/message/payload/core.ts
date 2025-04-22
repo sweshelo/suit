@@ -26,7 +26,7 @@ export interface UnitDrivePayload extends BasePayload {
 export interface ChoosePayload extends BasePayload {
   type: 'Choose';
   promptId: string;
-  choice: string[];
+  choice: string[] | undefined;
 }
 
 export interface WithdrawalPayload extends BasePayload {
