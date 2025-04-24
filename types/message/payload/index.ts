@@ -3,6 +3,7 @@ import type {
   DebugPrintPayload,
   DisplayEffectPayload,
   OperationPayload,
+  SelectedPayload,
   SoundEffectPayload,
   SyncPayload,
   TurnEndPayload,
@@ -50,4 +51,5 @@ export type Payload =
   | TurnEndPayload
   | AttackPayload
   | BootPayload
-  | DiscardPayload;
+  | DiscardPayload
+  | SelectedPayload;

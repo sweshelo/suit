@@ -33,6 +33,11 @@ export interface ChoicesPayload extends BasePayload {
   choices: Choices;
 }
 
+export interface SelectedPayload extends BasePayload {
+  type: 'Selected';
+  promptId: string;
+}
+
 export interface SyncPayload extends BasePayload {
   type: 'Sync';
   body: {
