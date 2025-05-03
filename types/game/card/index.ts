@@ -5,6 +5,13 @@ export interface IAtom {
 export interface ICard extends IAtom {
   catalogId: string;
   lv: number;
+  delta?: {
+    count: number;
+    effect: {
+      type: string;
+      name: string;
+    };
+  }[];
 }
 
 export interface IUnit extends ICard {
