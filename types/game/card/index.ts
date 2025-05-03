@@ -5,13 +5,37 @@ export interface IAtom {
 export interface ICard extends IAtom {
   catalogId: string;
   lv: number;
-  delta?: {
-    count: number;
-    effect: {
-      type: string;
-      name: string;
-    };
-  }[];
+  delta?: IDelta[];
+}
+
+export type KeywordEffect =
+  | '不屈'
+  | '無我の境地'
+  | '固着'
+  | '加護'
+  | '呪縛'
+  | '不滅'
+  | '王の治癒力'
+  | '秩序の盾'
+  | '沈黙'
+  | '破壊効果耐性'
+  | '消滅効果耐性'
+  | 'オーバーヒート';
+
+export type DeltaEffect =
+  | {
+    type: 'bp';
+    diff: number;
+  }
+  | {
+    type: 'keyword';
+    name: KeywordEffect;
+  };
+
+export interface IDelta {
+  count: number;
+  event: string | undefined;
+  effect: DeltaEffect;
 }
 
 export interface IUnit extends ICard {
