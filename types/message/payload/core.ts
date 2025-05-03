@@ -19,6 +19,13 @@ export interface UnitDrivePayload extends BasePayload {
   target: IAtom;
 }
 
+export interface EvolveDrivePayload extends BasePayload {
+  type: 'EvolveDrive';
+  player: string;
+  target: IAtom;
+  source: IAtom;
+}
+
 /**
  * プレイヤーが選択肢を選んだときに送信されるPayload
  * (<-> ChoicesResponse: 選択肢をClientに提示するPayload)

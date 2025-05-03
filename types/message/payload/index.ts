@@ -16,6 +16,7 @@ import type {
   ContinuePayload,
   DebugDrawPayload,
   DiscardPayload,
+  EvolveDrivePayload,
   OverridePayload,
   TriggerSetPayload,
   UnitDrivePayload,
@@ -52,4 +53,5 @@ export type Payload =
   | AttackPayload
   | BootPayload
   | DiscardPayload
-  | SelectedPayload;
+  | SelectedPayload
+  | EvolveDrivePayload;
