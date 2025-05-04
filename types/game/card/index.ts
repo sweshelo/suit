@@ -56,6 +56,7 @@ export interface IUnit extends ICard {
     damage: number;
   };
   active: boolean;
+  isCopy: boolean;
 }
 
 export interface Catalog {
