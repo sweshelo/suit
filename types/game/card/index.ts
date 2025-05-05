@@ -31,7 +31,8 @@ export type KeywordEffect =
   | '神託'
   | 'オーバーヒート'
   | '沈黙効果耐性'
-  | '撤退禁止';
+  | '撤退禁止'
+  | '起動';
 
 export type DeltaEffect =
   | {
