@@ -1,3 +1,5 @@
+import { writeFile } from 'fs/promises';
+
 // catalog.json 生成
 
 const base = 'https://coj.sega.jp/player/card/data/card_list_';
@@ -42,7 +44,7 @@ async function main() {
   }
 
   // 当システムにおけるデータ形式に変換
-  console.log(
+  const json =
     JSON.stringify(
       cards
         .map(card => {
@@ -73,7 +75,9 @@ async function main() {
         })
         .sort((a, b) => a.info.version - b.info.version)
     )
-  );
+
+  // catalog.json に書き出し
+  await writeFile('catalog.json', json, 'utf8');
 }
 
 main();
