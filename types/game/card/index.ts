@@ -9,6 +9,7 @@ export interface ICard extends IAtom {
 }
 
 export type KeywordEffect =
+  | '行動制限'
   | '不屈'
   | '貫通'
   | '無我の境地'
@@ -36,18 +37,18 @@ export type KeywordEffect =
 
 export type DeltaEffect =
   | {
-      type: 'bp';
-      diff: number;
-    }
+    type: 'bp';
+    diff: number;
+  }
   | {
-      type: 'keyword';
-      name: '次元干渉';
-      cost: number;
-    }
+    type: 'keyword';
+    name: '次元干渉';
+    cost: number;
+  }
   | {
-      type: 'keyword';
-      name: Exclude<KeywordEffect, '次元干渉'>;
-    };
+    type: 'keyword';
+    name: Exclude<KeywordEffect, '次元干渉'>;
+  };
 
 export interface IDelta {
   count: number;
