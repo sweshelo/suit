@@ -25,8 +25,8 @@ const pages = [
   'Classic.json',
   'Sp.json',
   // "joker.json",
-  // "virus.json", - カードNo.がないので取得しない
-  // "interceptunit.json", - カードNo.がないので取得しない
+  "Virus.json",
+  "Interceptunit.json",
   'PR.json',
 ];
 
@@ -46,10 +46,10 @@ async function main() {
     JSON.stringify(
       cards
         .map(card => {
-          const species = [card.species, card.species2].filter(v => v !== '-');
+          const species = [card.species, card.species2].filter(v => v !== '-' && v.length > 0);
           const bp = [card.bp1, card.bp2, card.bp3].filter(v => v > 0);
           return {
-            id: card.viewNo,
+            id: card.viewNo.length > 0 ? card.viewNo : card.name,
             name: card.name,
             rarity: card.rarity,
             type: card.type,
