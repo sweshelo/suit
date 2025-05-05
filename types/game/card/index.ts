@@ -35,13 +35,18 @@ export type KeywordEffect =
 
 export type DeltaEffect =
   | {
-    type: 'bp';
-    diff: number;
-  }
+      type: 'bp';
+      diff: number;
+    }
   | {
-    type: 'keyword';
-    name: KeywordEffect;
-  };
+      type: 'keyword';
+      name: '次元干渉';
+      cost: number;
+    }
+  | {
+      type: 'keyword';
+      name: Exclude<KeywordEffect, '次元干渉'>;
+    };
 
 export interface IDelta {
   count: number;
