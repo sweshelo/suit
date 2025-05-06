@@ -48,6 +48,22 @@ export type DeltaEffect =
   | {
     type: 'keyword';
     name: Exclude<KeywordEffect, '次元干渉'>;
+  }
+  | {
+    type: 'damage';
+    value: number;
+  }
+  | {
+    type: 'cost';
+    value: number;
+  }
+  | {
+    type: 'death'; // デスカウンター: 汎用
+    value: number;
+  }
+  | {
+    type: 'life'; // 寿命カウンター: ウィルス専用
+    value: number;
   };
 
 export interface IDelta {
@@ -57,11 +73,7 @@ export interface IDelta {
 }
 
 export interface IUnit extends ICard {
-  bp: {
-    base: number;
-    diff: number;
-    damage: number;
-  };
+  bp: number;
   active: boolean;
   isCopy: boolean;
 }

@@ -17,4 +17,5 @@ export interface IPlayer {
     current: number;
     max: number;
   };
+  joker: number;
 }
