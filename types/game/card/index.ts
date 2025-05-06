@@ -74,6 +74,7 @@ export interface IDelta {
 
 export interface IUnit extends ICard {
   bp: number;
+  currentBP: number;
   active: boolean;
   isCopy: boolean;
 }
