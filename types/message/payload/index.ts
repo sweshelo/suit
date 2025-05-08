@@ -15,6 +15,8 @@ import type {
   ChoosePayload,
   ContinuePayload,
   DebugDrawPayload,
+  DebugDrivePayload,
+  DebugMakePayload,
   DiscardPayload,
   EvolveDrivePayload,
   OverridePayload,
@@ -37,6 +39,8 @@ export type Payload =
   | PlayerEntryPayload
   | SyncPayload
   | DebugDrawPayload
+  | DebugDrivePayload
+  | DebugMakePayload
   | OverridePayload
   | UnitDrivePayload
   | DisplayEffectPayload
