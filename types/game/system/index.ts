@@ -7,6 +7,7 @@ interface Option {
 
 export type Choices = {
   title: string;
+  isCancelable?: boolean;
 } & (
   | {
       type: 'card';
