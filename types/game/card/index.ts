@@ -77,6 +77,7 @@ export interface IUnit extends ICard {
   currentBP: number;
   active: boolean;
   isCopy: boolean;
+  isBootable: boolean | undefined;
 }
 
 export interface Catalog {
