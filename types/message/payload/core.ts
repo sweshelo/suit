@@ -6,6 +6,19 @@ export interface DebugDrawPayload extends BasePayload {
   player: string;
 }
 
+export interface DebugDrivePayload extends BasePayload {
+  type: 'DebugDrive';
+  player: string;
+  catalogId: string;
+}
+
+export interface DebugMakePayload extends BasePayload {
+  type: 'DebugMake';
+  player: string;
+  catalogId: string;
+}
+
+
 export interface OverridePayload extends BasePayload {
   type: 'Override';
   player: string;
