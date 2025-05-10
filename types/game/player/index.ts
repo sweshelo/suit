@@ -9,6 +9,7 @@ export interface IPlayer {
   trash: ICard[];
   delete: ICard[];
   trigger: IAtom[];
+  purple: number;
   cp: {
     current: number;
     max: number;
