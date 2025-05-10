@@ -2,6 +2,7 @@ import type {
   ChoicesPayload,
   DebugPrintPayload,
   DisplayEffectPayload,
+  MulliganStartPayload,
   OperationPayload,
   SelectedPayload,
   SoundEffectPayload,
@@ -19,6 +20,7 @@ import type {
   DebugMakePayload,
   DiscardPayload,
   EvolveDrivePayload,
+  MulliganPayload,
   OverridePayload,
   TriggerSetPayload,
   UnitDrivePayload,
@@ -58,4 +60,6 @@ export type Payload =
   | BootPayload
   | DiscardPayload
   | SelectedPayload
-  | EvolveDrivePayload;
+  | EvolveDrivePayload
+  | MulliganPayload
+  | MulliganStartPayload;

@@ -86,3 +86,7 @@ export interface OperationPayload extends BasePayload {
 export interface TurnEndPayload extends BasePayload {
   type: 'TurnEnd';
 }
+
+export interface MulliganStartPayload extends BasePayload {
+  type: 'MulliganStart';
+}
