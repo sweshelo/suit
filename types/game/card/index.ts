@@ -59,11 +59,9 @@ export type DeltaEffect =
   }
   | {
     type: 'death'; // デスカウンター: 汎用
-    value: number;
   }
   | {
     type: 'life'; // 寿命カウンター: ウィルス専用
-    value: number;
   };
 
 export interface IDelta {
