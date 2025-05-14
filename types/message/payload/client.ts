@@ -84,7 +84,7 @@ export type VisualEffectPayload =
     body: {
       effect: 'status';
       unitId: string;
-      type: 'bp' | 'damage' | 'level';
+      type: 'bp' | 'base-bp' | 'damage' | 'level';
       value: number;
     }
   })
