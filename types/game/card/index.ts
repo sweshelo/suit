@@ -62,6 +62,9 @@ export type DeltaEffect =
   }
   | {
     type: 'life'; // 寿命カウンター: ウィルス専用
+  }
+  | {
+    type: 'banned'; // 使用不能
   };
 
 export interface IDelta {
@@ -88,7 +91,7 @@ export interface Catalog {
   ability: string;
   originality: number;
   img: string;
-  type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit';
+  type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit' | 'virus';
   species?: string[];
   info: {
     version: number;
