@@ -74,6 +74,10 @@ async function main() {
         ability: `■${card.name}\n${card.abilityText}`,
         originality: card.op,
         img: joker.jokerLImg.replace('../img', ''),
+        info: {
+          version: 0,
+          number: 0,
+        }
       })
     })
   }).flat()
