@@ -32389,5 +32389,428 @@
       "version": 28,
       "number": 64
     }
+  },
+  {
+    "id": "インペイルメント",
+    "name": "DEATH",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■インペイルメント\n対戦相手のユニットを１体選ぶ。それに１００００ダメージを与える。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_1.jpg"
+  },
+  {
+    "id": "パニッシュメントブレイク",
+    "name": "DEATH",
+    "type": "joker",
+    "cost": 4,
+    "ability": "■パニッシュメントブレイク\n対戦相手の全てのユニットに７０００ダメージを与える。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_1.jpg"
+  },
+  {
+    "id": "スプレンドシックル",
+    "name": "DEATH",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■スプレンドシックル\nあなたのユニットを２体まで選ぶ。それのレベルを＋１する。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_1.jpg"
+  },
+  {
+    "id": "ブレイブシールド",
+    "name": "JUSTICE",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■ブレイブシールド\nあなたのユニットを１体選ぶ。それの行動権を回復する。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_2.jpg"
+  },
+  {
+    "id": "ディバインシールド",
+    "name": "JUSTICE",
+    "type": "joker",
+    "cost": 3,
+    "ability": "■ディバインシールド\nあなたの全てのユニットの行動権を回復する。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_2.jpg"
+  },
+  {
+    "id": "セイクリッドシールド",
+    "name": "JUSTICE",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■セイクリッドシールド\nあなたのユニットを１体選ぶ。それの基本ＢＰを＋２０００し、【加護】を与える。\n",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_2.jpg"
+  },
+  {
+    "id": "スターライト",
+    "name": "THE STAR",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■スターライト\n対戦相手のコスト５以下のユニットを１体選ぶ。それを手札に戻す。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_3.jpg"
+  },
+  {
+    "id": "ライズアンドシャイン",
+    "name": "THE STAR",
+    "type": "joker",
+    "cost": 4,
+    "ability": "■ライズアンドシャイン\n全てのユニットを消滅させる。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_3.jpg"
+  },
+  {
+    "id": "スターインパクト",
+    "name": "THE STAR",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■スターインパクト\n対戦相手のトリガーゾーンにあるカードを全てデッキに戻す。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_3.jpg"
+  },
+  {
+    "id": "リトルウォンド",
+    "name": "THE MAGICIAN",
+    "type": "joker",
+    "cost": 6,
+    "ability": "■リトルウォンド\nあなたのＣＰを＋８する。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_4.jpg"
+  },
+  {
+    "id": "ワンダフルハンド",
+    "name": "THE MAGICIAN",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■ワンダフルハンド\n手札が７枚になるまでカードを引く。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_4.jpg"
+  },
+  {
+    "id": "トリックフィンガー",
+    "name": "THE MAGICIAN",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■トリックフィンガー\nあなたはカードを２枚引く。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_4.jpg"
+  },
+  {
+    "id": "ターミネートコマンド",
+    "name": "THE CHARIOT",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■ターミネートコマンド\nあなたのユニットを２体まで選ぶ。それに【貫通】を与え、基本ＢＰを＋２０００する。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_5.jpg"
+  },
+  {
+    "id": "マッシヴサージ",
+    "name": "THE CHARIOT",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■マッシヴサージ\nあなたの全てのユニットの基本ＢＰを＋５０００し、【不屈】を与える。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_5.jpg"
+  },
+  {
+    "id": "エイミングクラッシュ",
+    "name": "THE CHARIOT",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■エイミングクラッシュ\n対戦相手のユニットを１体選ぶ。それに【強制防御】を与える。そうした場合、お互いのプレイヤーのＣＰを＋１する。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_5.jpg"
+  },
+  {
+    "id": "冥札再臨",
+    "name": "THE MOON",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■冥札再臨\nあなたの捨札にあるカードを１枚選んで手札に加える。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_6.jpg"
+  },
+  {
+    "id": "明天凶殺",
+    "name": "THE MOON",
+    "type": "joker",
+    "cost": 4,
+    "ability": "■明天凶殺\n対戦相手の手札を全て破壊する。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_6.jpg"
+  },
+  {
+    "id": "月花熾滅",
+    "name": "THE MOON",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■月花熾滅\n対戦相手のレベル２以上のユニットを全て破壊する。\n",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_6.jpg"
+  },
+  {
+    "id": "デリートレイド",
+    "name": "THE EMPEROR",
+    "type": "joker",
+    "cost": 5,
+    "ability": "■デリートレイド\n対戦相手のユニットからランダムで２体まで破壊する。そうした場合、対戦相手に１ライフダメージを与える。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_7.jpg"
+  },
+  {
+    "id": "ヘレティックスカー",
+    "name": "THE EMPEROR",
+    "type": "joker",
+    "cost": 7,
+    "ability": "■ヘレティックスカー\n対戦相手に２ライフダメージを与える。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_7.jpg"
+  },
+  {
+    "id": "インペリアルクルセイド",
+    "name": "THE EMPEROR",
+    "type": "joker",
+    "cost": 7,
+    "ability": "■インペリアルクルセイド\n対戦相手の全てのユニットを破壊する。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_7.jpg"
+  },
+  {
+    "id": "インサイトストライフ",
+    "name": "THE EMPRESS",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■インサイトストライフ\nあなたのユニットを１体選ぶ。それに【スピードムーブ】を与える。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_8.jpg"
+  },
+  {
+    "id": "シャープリィスライヴ",
+    "name": "THE EMPRESS",
+    "type": "joker",
+    "cost": 5,
+    "ability": "■シャープリィスライヴ\nあなたの全てのユニットをオーバークロックさせる。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_8.jpg"
+  },
+  {
+    "id": "チェックメイトアクト",
+    "name": "THE EMPRESS",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■チェックメイトアクト\n対戦相手のユニットを２体まで選ぶ。それに【防御禁止】を与える。そうした場合、あなたのデッキから２枚までランダムでトリガーゾーンにインターセプトカードをセットする。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_8.jpg"
+  },
+  {
+    "id": "ルインリード",
+    "name": "THE HERMIT",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■ルインリード\nあなたの手札を２枚選んで捨てる。そうした場合、あなたはデッキからカードを３枚引く。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_9.jpg"
+  },
+  {
+    "id": "サイレンスビロウ",
+    "name": "THE HERMIT",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■サイレンスビロウ\n対戦相手の全てのユニットに【沈黙】を与え、基本ＢＰを－２０００する。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_9.jpg"
+  },
+  {
+    "id": "エビルガンビット",
+    "name": "THE HERMIT",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■エビルガンビット\nあなたは手札を１枚選んで捨てる。そうした場合、あなたのデッキからカードを１枚選んで手札に加える。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_9.jpg"
+  },
+  {
+    "id": "ソウルエクスキューション",
+    "name": "THE HIGH PRIESTESS",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■ソウルエクスキューション\n対戦相手のユニットからランダムで２体に【沈黙】を与える。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_10.jpg"
+  },
+  {
+    "id": "フォースリべレーション",
+    "name": "THE HIGH PRIESTESS",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■フォースリべレーション\nあなたの捨札にあるカードを２枚ランダムで手札に加える。あなたはカードを２枚引く。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_10.jpg"
+  },
+  {
+    "id": "アビスイミテーション",
+    "name": "THE HIGH PRIESTESS",
+    "type": "joker",
+    "cost": 3,
+    "ability": "■アビスイミテーション\n対戦相手の全てのユニットに【進化禁止】と【撤退禁止】とデスカウンター［１］を与える。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_10.jpg"
+  },
+  {
+    "id": "ギルティアッシュ",
+    "name": "THE DEVIL",
+    "type": "joker",
+    "cost": 0,
+    "ability": "■ギルティアッシュ\n対戦相手は自分のトリガーゾーンを公開する。あなたはその中からカードを１枚選び、それを破壊する。",
+    "originality": 0,
+    "img": "/cards/joker/large_card/joker_11.jpg"
+  },
+  {
+    "id": "ボルカニックディザスター",
+    "name": "THE DEVIL",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■ボルカニックディザスター\n全てのユニットに７０００ダメージを与える。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_11.jpg"
+  },
+  {
+    "id": "カーニバルドミネイト",
+    "name": "THE DEVIL",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■カーニバルドミネイト\n対戦相手のトリガーゾーンにあるカードを２枚までランダムで破壊する。あなたはカードを２枚引く。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_11.jpg"
+  },
+  {
+    "id": "フェイク×メイク",
+    "name": "THE LOVERS",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■フェイク×メイク\nあなたの手札を１枚選ぶ。それを手札に作成する。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_12.jpg"
+  },
+  {
+    "id": "ティンクル×リンク",
+    "name": "THE LOVERS",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■ティンクル×リンク\nお互いのプレイヤーは手札が５枚になるようにカードを引く。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_12.jpg"
+  },
+  {
+    "id": "アナザー×バイザー",
+    "name": "THE LOVERS",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■アナザー×バイザー\nあなたの手札にあるカードを１枚選ぶ。それのレベルを＋２する。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_12.jpg"
+  },
+  {
+    "id": "秘技・エクリプスセイバー",
+    "name": "THE TOWER",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■秘技・エクリプスセイバー\nあなたの捨札にある消滅しているカードを１枚選ぶ。それを手札に加える。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_13.jpg"
+  },
+  {
+    "id": "奥義・タワーエグゼクト",
+    "name": "THE TOWER",
+    "type": "joker",
+    "cost": 3,
+    "ability": "■奥義・タワーエグゼクト\n全てのユニットを手札に戻す。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_13.jpg"
+  },
+  {
+    "id": "極意・シュヴァリエドゥーク",
+    "name": "THE TOWER",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■極意・シュヴァリエドゥーク\nあなたのユニットを２体まで手札に戻し、コストを－２する。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_13.jpg"
+  },
+  {
+    "id": "蘭翔鳳集の舞",
+    "name": "STRENGTH",
+    "type": "joker",
+    "cost": 4,
+    "ability": "■蘭翔鳳集の舞\nあなたのデッキからコスト７以下のユニットを１体選ぶ。それを【特殊召喚】し、そのユニットの基本ＢＰを＋３０００する。",
+    "originality": 2,
+    "img": "/cards/joker/large_card/joker_14.jpg"
+  },
+  {
+    "id": "飛龍乗雲の拳",
+    "name": "STRENGTH",
+    "type": "joker",
+    "cost": 4,
+    "ability": "■飛龍乗雲の拳\nあなたの全てのユニットに【貫通】を与え、対戦相手の全てのユニットの基本ＢＰを－５０００する。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_14.jpg"
+  },
+  {
+    "id": "威気衝天の籠",
+    "name": "STRENGTH",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■威気衝天の籠\nあなたのユニットを１体選ぶ。それの基本ＢＰを２倍にし、【不屈】と【貫通】を与える。",
+    "originality": 6,
+    "img": "/cards/joker/large_card/joker_14.jpg"
+  },
+  {
+    "id": "ミラージュ・アウローラ",
+    "name": "DEATH Ω",
+    "type": "joker",
+    "cost": 1,
+    "ability": "■ミラージュ・アウローラ\nあなたのユニットを１体選ぶ。それに「ブロックされない」効果を与える。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_15.jpg"
+  },
+  {
+    "id": "スプレッド・インフェルノ",
+    "name": "DEATH Ω",
+    "type": "joker",
+    "cost": 2,
+    "ability": "■スプレッド・インフェルノ\n対戦相手のユニットを１体選ぶ。それに５０００ダメージを与え、対戦相手の全てのユニットに２０００ダメージを与える。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_15.jpg"
+  },
+  {
+    "id": "グラフィティ・アース",
+    "name": "DEATH Ω",
+    "type": "joker",
+    "cost": 3,
+    "ability": "■グラフィティ・アース\nあなたはカードを３枚引く。引いたカードのコストを－１する。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_15.jpg"
+  },
+  {
+    "id": "リジェネレート・デリュージ",
+    "name": "DEATH Ω",
+    "type": "joker",
+    "cost": 3,
+    "ability": "■リジェネレート・デリュージ\nあなたの捨札にある進化ユニット以外のコスト３以下のユニットをランダムで５体まで【特殊召喚】する。",
+    "originality": 4,
+    "img": "/cards/joker/large_card/joker_15.jpg"
+  },
+  {
+    "id": "アブソリュート・アーク",
+    "name": "DEATH Ω",
+    "type": "joker",
+    "cost": 7,
+    "ability": "■アブソリュート・アーク\nあなたのフィールドにユニットが５体以上で、あなたの手札が７枚以上ある場合、あなたは対戦に勝利する。",
+    "originality": 10,
+    "img": "/cards/joker/large_card/joker_15.jpg"
   }
 ]

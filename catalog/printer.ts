@@ -26,11 +26,30 @@ const pages = [
   'Ver.1.2.json',
   'Classic.json',
   'Sp.json',
-  // "joker.json",
   "Virus.json",
   "Interceptunit.json",
   'PR.json',
 ];
+
+interface Joker {
+  abilities: JokerAbility[];
+  charName: string;
+  jokerName: string;
+  jokerLImg: string;
+  jokerSImg: string;
+}
+interface JokerAbility {
+  abilityText: string;
+  cp: number;
+  customImg: string;
+  gaugeSpeed: '小' | '中' | '大' | '特大';
+  name: string;
+  op: number;
+}
+
+interface JokerResponse {
+  joker: Joker[]
+}
 
 async function main() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -43,10 +62,26 @@ async function main() {
     cards = [...cards, ..._cards];
   }
 
+  const jkResponse = await fetch(`${base}joker.json`);
+  const jkResult = await jkResponse.json() as JokerResponse;
+  const jkMaster = jkResult.joker.map(joker => {
+    return joker.abilities.map(card => {
+      return ({
+        id: card.name,
+        name: joker.jokerName,
+        type: 'joker',
+        cost: card.cp,
+        ability: `■${card.name}\n${card.abilityText}`,
+        originality: card.op,
+        img: joker.jokerLImg.replace('../img', ''),
+      })
+    })
+  }).flat()
+
   // 当システムにおけるデータ形式に変換
   const json =
-    JSON.stringify(
-      cards
+    JSON.stringify([
+      ...cards
         .map(card => {
           const species = [card.species, card.species2].filter(v => v !== '-' && v.length > 0);
           const bp = [card.bp1, card.bp2, card.bp3].filter(v => v > 0);
@@ -73,8 +108,9 @@ async function main() {
             },
           };
         })
-        .sort((a, b) => a.info.version - b.info.version)
-    )
+        .sort((a, b) => a.info.version - b.info.version),
+      ...jkMaster,
+    ])
 
   // catalog.json に書き出し
   await writeFile('catalog.json', json, 'utf8');
