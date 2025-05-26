@@ -88,4 +88,5 @@ export interface DiscardPayload extends BasePayload {
 export interface MulliganPayload extends BasePayload {
   type: 'Mulligan';
   action: 'done' | 'retry';
+  player: string;
 }
