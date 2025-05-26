@@ -91,7 +91,7 @@ export interface Catalog {
   ability: string;
   originality: number;
   img: string;
-  type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit' | 'virus';
+  type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit' | 'virus' | 'joker';
   species?: string[];
   info: {
     version: number;
