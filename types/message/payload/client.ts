@@ -88,6 +88,13 @@ export type VisualEffectPayload =
       value: number;
     }
   })
+  | ({
+    type: 'VisualEffect';
+    body: {
+      effect: 'select';
+      unitId: string;
+    };
+  })
 
 export interface SoundEffectPayload extends BasePayload {
   type: 'SoundEffect';
