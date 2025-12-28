@@ -1,3 +1,5 @@
+import type { Species } from "./species";
+
 export interface IAtom {
   id: string;
 }
@@ -93,7 +95,7 @@ export interface Catalog {
   originality: number;
   img: string;
   type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit' | 'virus' | 'joker';
-  species?: string[];
+  species?: Species[];
   info: {
     version: number;
     number: number;
