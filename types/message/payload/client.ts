@@ -95,6 +95,13 @@ export type VisualEffectPayload =
       unitId: string;
     };
   })
+  | ({
+    type: 'VisualEffect';
+    body: {
+      effect: 'block';
+      blockerId: string;
+    };
+  })
 
 export interface SoundEffectPayload extends BasePayload {
   type: 'SoundEffect';
