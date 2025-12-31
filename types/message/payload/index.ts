@@ -25,6 +25,7 @@ import type {
   TriggerSetPayload,
   UnitDrivePayload,
   WithdrawalPayload,
+  BlockPayload,
 } from './core';
 import type { PlayerEntryPayload } from './room';
 import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server';
@@ -57,6 +58,7 @@ export type Payload =
   | OperationPayload
   | TurnEndPayload
   | AttackPayload
+  | BlockPayload
   | BootPayload
   | DiscardPayload
   | SelectedPayload

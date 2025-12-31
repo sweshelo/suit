@@ -73,6 +73,12 @@ export interface AttackPayload extends BasePayload {
   target: IUnit;
 }
 
+export interface BlockPayload extends BasePayload {
+  type: 'Block';
+  player: string;
+  target: IUnit;
+}
+
 export interface BootPayload extends BasePayload {
   type: 'Boot';
   player: string;
