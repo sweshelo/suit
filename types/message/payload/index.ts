@@ -20,6 +20,7 @@ import type {
   DebugMakePayload,
   DiscardPayload,
   EvolveDrivePayload,
+  JokerDrivePayload,
   MulliganPayload,
   OverridePayload,
   TriggerSetPayload,
@@ -63,5 +64,6 @@ export type Payload =
   | DiscardPayload
   | SelectedPayload
   | EvolveDrivePayload
+  | JokerDrivePayload
   | MulliganPayload
   | MulliganStartPayload;

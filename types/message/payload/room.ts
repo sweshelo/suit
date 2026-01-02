@@ -14,4 +14,5 @@ export interface PlayerEntryPayload extends RoomPayload {
     id: string;
     deck: string[];
   };
+  jokersOwned?: string[]; // FIXME: 将来的に deck に含める
 }
