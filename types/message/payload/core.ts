@@ -39,6 +39,12 @@ export interface EvolveDrivePayload extends BasePayload {
   source: IAtom;
 }
 
+export interface JokerDrivePayload extends BasePayload {
+  type: 'JokerDrive';
+  player: string;
+  target: IAtom;
+}
+
 /**
  * プレイヤーが選択肢を選んだときに送信されるPayload
  * (<-> ChoicesResponse: 選択肢をClientに提示するPayload)
