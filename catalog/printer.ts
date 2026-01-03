@@ -77,7 +77,8 @@ async function main() {
         info: {
           version: 0,
           number: 0,
-        }
+        },
+        gauge: card.gaugeSpeed,
       })
     })
   }).flat()

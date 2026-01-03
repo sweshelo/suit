@@ -1,4 +1,5 @@
 import type { IAtom, ICard, IUnit } from '../card';
+import type { IJoker } from '../joker';
 
 export interface IPlayer {
   id: string;
@@ -9,7 +10,6 @@ export interface IPlayer {
   trash: ICard[];
   delete: ICard[];
   trigger: IAtom[];
-  jokers: ICard[];
   purple: number | undefined;
   cp: {
     current: number;
@@ -19,5 +19,8 @@ export interface IPlayer {
     current: number;
     max: number;
   };
-  joker: number;
+  joker: {
+    card: IJoker[];
+    gauge: number;
+  };
 }

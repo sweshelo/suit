@@ -1,3 +1,4 @@
+import type { JokerGuageAmountKey } from "../../../constant/joker";
 import type { Species } from "./species";
 
 export interface IAtom {
@@ -100,4 +101,5 @@ export interface Catalog {
     version: number;
     number: number;
   };
+  gauge?: JokerGuageAmountKey
 }
