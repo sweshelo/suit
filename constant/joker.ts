@@ -6,10 +6,10 @@ const jokerGuageAmountKey = [
 ] as const
 
 export const JOKER_GAUGE_AMOUNT: Record<JokerGuageAmountKey, number> = {
-  '小': 40,
-  '中': 52.5,
-  '大': 65,
-  '特大': 80,
+  '小': 41,
+  '中': 53.5,
+  '大': 66,
+  '特大': 81,
 }
 
 export type JokerGuageAmountKey = (typeof jokerGuageAmountKey)[number];
