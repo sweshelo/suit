@@ -147,6 +147,16 @@ export interface PlayerDisconnectedPayload extends BasePayload {
 }
 
 /**
+ * プレイヤー復帰通知ペイロード
+ * 切断したプレイヤーが再接続した際に他のプレイヤーに送信される
+ */
+export interface PlayerReconnectedPayload extends BasePayload {
+  type: 'PlayerReconnected';
+  reconnectedPlayerId: string;
+  timestamp: number;
+}
+
+/**
  * ルーム閉鎖通知ペイロード
  * ルームが閉鎖される際にクライアントに送信される
  */
