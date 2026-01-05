@@ -6,6 +6,7 @@ import type { IPlayer } from '../../game';
 import type { Choices } from '../../game/system';
 import type { Rule } from '../../rule';
 import type { BasePayload } from './base';
+import type { ErrorCode } from '../../../constant/error';
 
 interface GameStats {
   round: number;
@@ -119,4 +120,39 @@ export interface TurnEndPayload extends BasePayload {
 
 export interface MulliganStartPayload extends BasePayload {
   type: 'MulliganStart';
+}
+
+/**
+ * エラー通知ペイロード
+ * サーバーからクライアントにエラー情報を送信する
+ */
+export interface ErrorPayload extends BasePayload {
+  type: 'Error';
+  errorCode: ErrorCode;
+  message: string;
+  details?: Record<string, unknown>;
+  timestamp: number;
+}
+
+/**
+ * プレイヤー切断通知ペイロード
+ * 対戦相手が切断した際に残りのプレイヤーに送信される
+ */
+export interface PlayerDisconnectedPayload extends BasePayload {
+  type: 'PlayerDisconnected';
+  disconnectedPlayerId: string;
+  reason: 'connection_lost' | 'client_close' | 'timeout';
+  timestamp: number;
+  roomWillClose: boolean;
+}
+
+/**
+ * ルーム閉鎖通知ペイロード
+ * ルームが閉鎖される際にクライアントに送信される
+ */
+export interface RoomClosedPayload extends BasePayload {
+  type: 'RoomClosed';
+  roomId: string;
+  reason: 'empty' | 'admin_close' | 'error';
+  message?: string;
 }
