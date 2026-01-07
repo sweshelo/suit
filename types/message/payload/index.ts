@@ -4,6 +4,8 @@ import type {
   DisplayEffectPayload,
   MulliganStartPayload,
   OperationPayload,
+  PlayerDisconnectedPayload,
+  PlayerReconnectedPayload,
   SelectedPayload,
   SoundEffectPayload,
   SyncPayload,
@@ -41,6 +43,8 @@ export type Payload =
   | RoomOpenRequestPayload
   | RoomOpenResponsePayload
   | PlayerEntryPayload
+  | PlayerDisconnectedPayload
+  | PlayerReconnectedPayload
   | SyncPayload
   | DebugDrawPayload
   | DebugDrivePayload
