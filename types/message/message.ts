@@ -6,6 +6,7 @@ import type {
   RoomOpenRequestPayload,
   RoomOpenResponsePayload,
   PlayerEntryPayload,
+  TurnChangePayload,
 } from './payload';
 
 /**
@@ -83,6 +84,7 @@ export interface PayloadTypeToPayload {
   RoomOpenRequest: RoomOpenRequestPayload;
   RoomOpenResponse: RoomOpenResponsePayload;
   PlayerEntry: PlayerEntryPayload;
+  TurnChange: TurnChangePayload;
   // 他のペイロードタイプも必要に応じて追加
 }
 
@@ -101,6 +103,7 @@ export interface ActionTypeToPayloadType {
   open: 'RoomOpenRequest';
   response: 'RoomOpenResponse';
   join: 'PlayerEntry';
+  turnChange: 'TurnChange';
   // 他のアクションタイプとペイロードタイプの関連付けも必要に応じて追加
 }
 
@@ -111,6 +114,7 @@ export const actionTypeToPayloadType: ActionTypeToPayloadType = {
   open: 'RoomOpenRequest',
   response: 'RoomOpenResponse',
   join: 'PlayerEntry',
+  turnChange: 'TurnChange',
 };
 
 /**
@@ -180,3 +184,4 @@ export function createMessageFromActionType<
     } as PayloadFromActionType<T>,
   };
 }
+
