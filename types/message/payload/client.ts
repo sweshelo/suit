@@ -166,3 +166,13 @@ export interface RoomClosedPayload extends BasePayload {
   reason: 'empty' | 'admin_close' | 'error';
   message?: string;
 }
+
+/**
+ * ターンチェンジペイロード
+ * クライアントにターンチェンジを通知
+ */
+export interface TurnChangePayload extends BasePayload {
+  type: 'TurnChange';
+  player: string;
+  isFirst: boolean;
+}

@@ -11,6 +11,7 @@ import type {
   SyncPayload,
   TurnEndPayload,
   VisualEffectPayload,
+  TurnChangePayload,
 } from './client';
 import type {
   AttackPayload,
@@ -70,4 +71,5 @@ export type Payload =
   | EvolveDrivePayload
   | JokerDrivePayload
   | MulliganPayload
-  | MulliganStartPayload;
+  | MulliganStartPayload
+  | TurnChangePayload;
