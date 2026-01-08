@@ -32,7 +32,12 @@ import type {
   BlockPayload,
 } from './core';
 import type { PlayerEntryPayload } from './room';
-import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server';
+import type {
+  RoomOpenRequestPayload,
+  RoomOpenResponsePayload,
+  MatchingStartRequestPayload,
+  MatchingCancelRequestPayload,
+} from './server';
 
 export type * from './base';
 export type * from './room';
@@ -43,6 +48,8 @@ export type * from './core';
 export type Payload =
   | RoomOpenRequestPayload
   | RoomOpenResponsePayload
+  | MatchingStartRequestPayload
+  | MatchingCancelRequestPayload
   | PlayerEntryPayload
   | PlayerDisconnectedPayload
   | PlayerReconnectedPayload
