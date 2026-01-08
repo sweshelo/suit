@@ -26,6 +26,13 @@ export const ErrorCode = {
   ROOM_FULL: 'ROOM_002',
   ROOM_CLOSED: 'ROOM_003',
 
+  // マッチングエラー (MATCHING_xxx)
+  MATCHING_ALREADY_QUEUED: 'MATCHING_001',
+  MATCHING_QUEUE_NOT_FOUND: 'MATCHING_002',
+  MATCHING_TIMEOUT: 'MATCHING_003',
+  MATCHING_CANCELLED: 'MATCHING_004',
+  MATCHING_INVALID_CRITERIA: 'MATCHING_005',
+
   // ゲームエラー (GAME_xxx)
   GAME_INVALID_MOVE: 'GAME_001',
   GAME_NOT_YOUR_TURN: 'GAME_002',
@@ -53,6 +60,12 @@ export const ErrorMessage: Record<ErrorCode, string> = {
   [ErrorCode.ROOM_NOT_FOUND]: 'ルームが見つかりません',
   [ErrorCode.ROOM_FULL]: 'ルームが満員です',
   [ErrorCode.ROOM_CLOSED]: 'ルームが閉じられました',
+
+  [ErrorCode.MATCHING_ALREADY_QUEUED]: '既にマッチングキューに参加しています',
+  [ErrorCode.MATCHING_QUEUE_NOT_FOUND]: 'マッチングキューが見つかりません',
+  [ErrorCode.MATCHING_TIMEOUT]: 'マッチングがタイムアウトしました',
+  [ErrorCode.MATCHING_CANCELLED]: 'マッチングがキャンセルされました',
+  [ErrorCode.MATCHING_INVALID_CRITERIA]: 'マッチング条件が無効です',
 
   [ErrorCode.GAME_INVALID_MOVE]: '無効な手です',
   [ErrorCode.GAME_NOT_YOUR_TURN]: 'あなたのターンではありません',

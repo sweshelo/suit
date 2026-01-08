@@ -176,3 +176,29 @@ export interface TurnChangePayload extends BasePayload {
   player: string;
   isFirst: boolean;
 }
+
+/**
+ * マッチングステータス更新ペイロード
+ * サーバーからクライアントにマッチング状態を通知
+ */
+export interface MatchingStatusPayload extends BasePayload {
+  type: 'MatchingStatus';
+  queueId: string;
+  status: 'searching' | 'found' | 'cancelled' | 'expired';
+  queuePosition?: number;
+  estimatedWaitTime?: number;
+}
+
+/**
+ * マッチング成立ペイロード
+ * サーバーからクライアントにマッチング成立を通知
+ */
+export interface MatchFoundPayload extends BasePayload {
+  type: 'MatchFound';
+  roomId: string;
+  opponent: {
+    id: string;
+    name: string;
+    rating?: number;
+  };
+}
