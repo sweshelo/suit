@@ -12,6 +12,8 @@ import type {
   TurnEndPayload,
   VisualEffectPayload,
   TurnChangePayload,
+  MatchingStatusPayload,
+  MatchFoundPayload,
 } from './client';
 import type {
   AttackPayload,
@@ -32,7 +34,7 @@ import type {
   BlockPayload,
 } from './core';
 import type { PlayerEntryPayload } from './room';
-import type { RoomOpenRequestPayload, RoomOpenResponsePayload } from './server';
+import type { RoomOpenRequestPayload, RoomOpenResponsePayload, MatchingStartRequestPayload, MatchingCancelRequestPayload } from './server';
 
 export type * from './base';
 export type * from './room';
@@ -72,4 +74,8 @@ export type Payload =
   | JokerDrivePayload
   | MulliganPayload
   | MulliganStartPayload
-  | TurnChangePayload;
+  | TurnChangePayload
+  | MatchingStartRequestPayload
+  | MatchingCancelRequestPayload
+  | MatchingStatusPayload
+  | MatchFoundPayload;
