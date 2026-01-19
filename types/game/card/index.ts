@@ -45,6 +45,7 @@ export type DeltaEffect =
   }
   | {
     type: 'dynamic-bp';
+    diff: number;
   }
   | {
     type: 'keyword';
