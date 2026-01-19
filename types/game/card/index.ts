@@ -44,6 +44,9 @@ export type DeltaEffect =
     diff: number;
   }
   | {
+    type: 'dynamic-bp';
+  }
+  | {
     type: 'keyword';
     name: '次元干渉';
     cost: number;
