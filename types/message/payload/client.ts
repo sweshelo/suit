@@ -11,6 +11,8 @@ import type { ErrorCode } from '../../../constant/error';
 interface GameStats {
   round: number;
   turn: number;
+  turnPlayer: IPlayer['id'],
+  firstPlayer: IPlayer['id'],
 }
 
 export interface DisplayEffectPayload extends BasePayload {
