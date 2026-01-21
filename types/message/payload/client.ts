@@ -119,6 +119,7 @@ export interface OperationPayload extends BasePayload {
 
 export interface TurnEndPayload extends BasePayload {
   type: 'TurnEnd';
+  remainingTime: number;
 }
 
 export interface MulliganStartPayload extends BasePayload {
