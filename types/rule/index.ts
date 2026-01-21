@@ -1,6 +1,7 @@
 export interface Rule {
   system: {
     round: number;
+    turnTime: number; // ターン時間（秒）
     draw: {
       top: number;
       override: number;

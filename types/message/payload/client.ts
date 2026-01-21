@@ -112,6 +112,7 @@ export interface SoundEffectPayload extends BasePayload {
 export interface OperationPayload extends BasePayload {
   type: 'Operation';
   action: 'freeze' | 'defrost';
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 export interface TurnEndPayload extends BasePayload {

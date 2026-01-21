@@ -30,6 +30,7 @@ export interface UnitDrivePayload extends BasePayload {
   type: 'UnitDrive';
   player: string;
   target: IAtom;
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 export interface EvolveDrivePayload extends BasePayload {
@@ -37,12 +38,14 @@ export interface EvolveDrivePayload extends BasePayload {
   player: string;
   target: IAtom;
   source: IAtom;
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 export interface JokerDrivePayload extends BasePayload {
   type: 'JokerDrive';
   player: string;
   target: IAtom;
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 /**
@@ -77,6 +80,7 @@ export interface AttackPayload extends BasePayload {
   type: 'Attack';
   player: string;
   target: IUnit;
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 export interface BlockPayload extends BasePayload {
@@ -89,6 +93,7 @@ export interface BootPayload extends BasePayload {
   type: 'Boot';
   player: string;
   target: IUnit;
+  remainingTime?: number; // 残り時間（ミリ秒）
 }
 
 export interface DiscardPayload extends BasePayload {
