@@ -30,8 +30,16 @@ export interface Rule {
   };
   misc: {
     strictOverride: boolean;
-    suicideJoker: boolean;
   };
+  joker: {
+    suicide: boolean;
+    single: boolean;
+    inHand: boolean;
+    gauge: number;
+    lifeDamage: number;
+    maxTurnEnd: number;
+    minTurnEnd: number;
+  }
   debug?: {
     enable: boolean;
     reveal: {
