@@ -9,7 +9,7 @@ export interface ICard extends IAtom {
   catalogId: string;
   lv: number;
   delta?: IDelta[];
-  currentCost: number;
+  currentCost?: number;
 }
 
 export type KeywordEffect =
