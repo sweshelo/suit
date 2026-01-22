@@ -65,6 +65,10 @@ export type DeltaEffect =
     value: number;
   }
   | {
+    type: 'dynamic-cost';
+    diff: number;
+  }
+  | {
     type: 'death'; // デスカウンター: 汎用
   }
   | {
