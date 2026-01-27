@@ -110,5 +110,10 @@ export interface Catalog {
     version: number;
     number: number;
   };
-  gauge?: JokerGuageAmountKey
+  gauge?: JokerGuageAmountKey;
+  visible?: number;
+  rank?: {
+    order: number;
+    point: number;
+  };
 }
