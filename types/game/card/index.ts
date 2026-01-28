@@ -116,4 +116,5 @@ export interface Catalog {
     order: number;
     point: number;
   };
+  related?: string[];
 }
