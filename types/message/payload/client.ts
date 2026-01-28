@@ -43,6 +43,8 @@ export interface SelectedPayload extends BasePayload {
 
 export interface SyncPayload extends BasePayload {
   type: 'Sync';
+  selfId?: string;
+  role?: 'player' | 'spectator';
   body: {
     rule: Rule;
     game: GameStats;
