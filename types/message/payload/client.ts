@@ -184,27 +184,11 @@ export interface TurnChangePayload extends BasePayload {
 }
 
 /**
- * マッチングステータス更新ペイロード
- * サーバーからクライアントにマッチング状態を通知
+ * ゲームの終了を伝達するペイロード
+ * winner がない場合、両者敗北を示す
  */
-export interface MatchingStatusPayload extends BasePayload {
-  type: 'MatchingStatus';
-  queueId: string;
-  status: 'searching' | 'found' | 'cancelled' | 'expired';
-  queuePosition?: number;
-  estimatedWaitTime?: number;
-}
-
-/**
- * マッチング成立ペイロード
- * サーバーからクライアントにマッチング成立を通知
- */
-export interface MatchFoundPayload extends BasePayload {
-  type: 'MatchFound';
-  roomId: string;
-  opponent: {
-    id: string;
-    name: string;
-    rating?: number;
-  };
+export interface SituationCompletedPayload extends BasePayload {
+  type: 'SitulationCompleted';
+  winner: string;
+  reason: 'damage' | 'limit'
 }

@@ -12,8 +12,6 @@ import type {
   TurnEndPayload,
   VisualEffectPayload,
   TurnChangePayload,
-  MatchingStatusPayload,
-  MatchFoundPayload,
 } from './client';
 import type {
   AttackPayload,
@@ -84,5 +82,3 @@ export type Payload =
   | TurnChangePayload
   | MatchingStartRequestPayload
   | MatchingCancelRequestPayload
-  | MatchingStatusPayload
-  | MatchFoundPayload;
