@@ -188,7 +188,7 @@ export interface TurnChangePayload extends BasePayload {
  * winner がない場合、両者敗北を示す
  */
 export interface SituationCompletedPayload extends BasePayload {
-  type: 'SitulationCompleted';
-  winner: string;
+  type: 'SituationCompleted';
+  winner?: string;
   reason: 'damage' | 'limit'
 }
