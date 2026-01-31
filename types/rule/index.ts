@@ -30,6 +30,7 @@ export interface Rule {
   };
   misc: {
     strictOverride: boolean;
+    autoEndOnTimeout: boolean;
   };
   joker: {
     suicide: boolean;
