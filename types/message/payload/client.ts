@@ -52,61 +52,38 @@ export interface SyncPayload extends BasePayload {
   };
 }
 
-export type VisualEffectPayload =
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'drive';
-      type: 'UNIT' | 'EVOLVE' | 'INTERCEPT' | 'TRIGGER' | 'JOKER';
-      player: string;
-      image: string;
-    };
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'attack';
-      attackerId: string;
-    };
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'launch';
-      attackerId: string;
-      blockerId?: string;
-    };
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'launch-cancel';
-      attackerId: string;
-    }
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'status';
-      unitId: string;
-      type: 'bp' | 'base-bp' | 'damage' | 'level';
-      value: number;
-    }
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'select';
-      unitId: string;
-    };
-  })
-  | ({
-    type: 'VisualEffect';
-    body: {
-      effect: 'block';
-      blockerId: string;
-    };
-  })
+export type VisualEffectPayloadBody = {
+  effect: 'drive';
+  type: 'UNIT' | 'EVOLVE' | 'INTERCEPT' | 'TRIGGER' | 'JOKER';
+  player: string;
+  image: string;
+} | {
+  effect: 'attack';
+  attackerId: string;
+} | {
+  effect: 'launch';
+  attackerId: string;
+  blockerId?: string;
+} | {
+  effect: 'launch-cancel';
+  attackerId: string;
+} | {
+  effect: 'status';
+  unitId: string;
+  type: 'bp' | 'base-bp' | 'damage' | 'level';
+  value: number;
+} | {
+  effect: 'select';
+  unitId: string;
+} | {
+  effect: 'block';
+  blockerId: string;
+}
+
+export type VisualEffectPayload = {
+  type: 'VisualEffect'
+  body: VisualEffectPayloadBody
+}
 
 export interface SoundEffectPayload extends BasePayload {
   type: 'SoundEffect';
