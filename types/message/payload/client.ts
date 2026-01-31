@@ -70,7 +70,7 @@ export type VisualEffectPayloadBody = {
 } | {
   effect: 'status';
   unitId: string;
-  type: 'bp' | 'base-bp' | 'damage' | 'level';
+  type: 'bp' | 'base-bp' | 'damage' | 'level' | 'overclock';
   value: number;
 } | {
   effect: 'select';
