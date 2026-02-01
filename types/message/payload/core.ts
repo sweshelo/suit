@@ -107,3 +107,8 @@ export interface MulliganPayload extends BasePayload {
   action: 'done' | 'retry';
   player: string;
 }
+
+export interface SurrenderPayload extends BasePayload {
+  type: 'Surrender';
+  player: string;
+}

@@ -27,6 +27,7 @@ import type {
   JokerDrivePayload,
   MulliganPayload,
   OverridePayload,
+  SurrenderPayload,
   TriggerSetPayload,
   UnitDrivePayload,
   WithdrawalPayload,
@@ -80,6 +81,7 @@ export type Payload =
   | JokerDrivePayload
   | MulliganPayload
   | MulliganStartPayload
+  | SurrenderPayload
   | TurnChangePayload
   | MatchingStartRequestPayload
   | MatchingCancelRequestPayload
