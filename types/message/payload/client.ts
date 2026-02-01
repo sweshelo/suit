@@ -169,3 +169,14 @@ export interface SituationCompletedPayload extends BasePayload {
   winner?: string;
   reason: 'damage' | 'limit' | 'surrender'
 }
+
+/**
+ * マッチング成功通知ペイロード
+ * マッチングが成立した際に両プレイヤーに送信される
+ */
+export interface MatchingSuccessPayload extends BasePayload {
+  type: 'MatchingSuccess';
+  roomId: string;
+  opponentName: string;
+  mode: 'freedom' | 'standard' | 'legacy' | 'limited';
+}

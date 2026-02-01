@@ -1,5 +1,5 @@
-import type { Rule } from '../../rule';
 import type { RequestPayload, ResponsePayload } from './base';
+import type { Rule } from '../../rule';
 
 export interface RoomOpenRequestPayload extends RequestPayload {
   type: 'RoomOpenRequest';
@@ -13,19 +13,37 @@ export interface RoomOpenResponsePayload extends ResponsePayload {
 }
 
 /**
+ * マッチングモード
+ * - freedom: 制限なし。全カード使用可能。
+ * - standard: Ver.1.2以降。同名カード3枚まで。
+ * - legacy: Ver.1.4EX3以前。1stジョーカー、手札加算方式。
+ * - limited: デッキ合計オリジナリティ100以上必須。
+ */
+export type MatchingMode = 'freedom' | 'standard' | 'legacy' | 'limited';
+
+/**
  * マッチング開始リクエストペイロード
  * クライアントからサーバーにマッチングキューへの参加を要求
  */
 export interface MatchingStartRequestPayload extends RequestPayload {
   type: 'MatchingStartRequest';
-  userId: string;
-  mode: 'random' | 'rating' | 'rule';
-  criteria: {
-    rating?: number;
-    rulePreference?: Rule;
+  mode: MatchingMode;
+  player: {
+    name: string;
+    id: string;
     deck: string[];
-    jokersOwned?: string[];
   };
+  jokersOwned?: string[];
+}
+
+/**
+ * マッチング開始レスポンスペイロード
+ * キューへの参加確認を返す
+ */
+export interface MatchingStartResponsePayload extends ResponsePayload {
+  type: 'MatchingStartResponse';
+  queueId: string;
+  position: number;
 }
 
 /**
@@ -34,6 +52,12 @@ export interface MatchingStartRequestPayload extends RequestPayload {
  */
 export interface MatchingCancelRequestPayload extends RequestPayload {
   type: 'MatchingCancelRequest';
-  userId: string;
-  queueId: string;
+}
+
+/**
+ * マッチングキャンセルレスポンスペイロード
+ * キャンセル確認を返す
+ */
+export interface MatchingCancelResponsePayload extends ResponsePayload {
+  type: 'MatchingCancelResponse';
 }
