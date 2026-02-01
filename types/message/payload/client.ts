@@ -167,5 +167,5 @@ export interface TurnChangePayload extends BasePayload {
 export interface SituationCompletedPayload extends BasePayload {
   type: 'SituationCompleted';
   winner?: string;
-  reason: 'damage' | 'limit'
+  reason: 'damage' | 'limit' | 'surrender'
 }
