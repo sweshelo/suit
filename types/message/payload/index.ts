@@ -41,6 +41,7 @@ import type {
   MatchingStartRequestPayload,
   MatchingCancelRequestPayload,
   LeaveRoomRequestPayload,
+  MatchingStatusRequestPayload,
 } from './server';
 
 export type * from './base';
@@ -90,3 +91,4 @@ export type Payload =
   | SituationCompletedPayload
   | LeaveRoomRequestPayload
   | MatchingStatusPayload
+  | MatchingStatusRequestPayload

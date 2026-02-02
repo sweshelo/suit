@@ -70,3 +70,11 @@ export interface LeaveRoomRequestPayload extends BasePayload {
   type: 'LeaveRoomRequest';
   roomId: string;
 }
+
+/**
+ * マッチング状況リクエストペイロード
+ * クライアントからサーバーに現在のマッチングキュー状況を要求
+ */
+export interface MatchingStatusRequestPayload extends BasePayload {
+  type: 'MatchingStatusRequest';
+}
