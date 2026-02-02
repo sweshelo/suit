@@ -61,3 +61,12 @@ export interface MatchingCancelRequestPayload extends RequestPayload {
 export interface MatchingCancelResponsePayload extends ResponsePayload {
   type: 'MatchingCancelResponse';
 }
+
+/**
+ * ルーム退室リクエストペイロード
+ * ゲーム終了後にクライアントがルームを退室する際に送信
+ */
+export interface LeaveRoomRequestPayload extends RequestPayload {
+  type: 'LeaveRoomRequest';
+  roomId: string;
+}
