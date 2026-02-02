@@ -1,4 +1,4 @@
-import type { RequestPayload, ResponsePayload } from './base';
+import type { BasePayload, RequestPayload, ResponsePayload } from './base';
 import type { Rule } from '../../rule';
 
 export interface RoomOpenRequestPayload extends RequestPayload {
@@ -66,7 +66,7 @@ export interface MatchingCancelResponsePayload extends ResponsePayload {
  * ルーム退室リクエストペイロード
  * ゲーム終了後にクライアントがルームを退室する際に送信
  */
-export interface LeaveRoomRequestPayload extends RequestPayload {
+export interface LeaveRoomRequestPayload extends BasePayload {
   type: 'LeaveRoomRequest';
   roomId: string;
 }
