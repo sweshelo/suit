@@ -180,3 +180,18 @@ export interface MatchingSuccessPayload extends BasePayload {
   opponentName: string;
   mode: 'freedom' | 'standard' | 'legacy' | 'limited';
 }
+
+/**
+ * マッチング待機状況ペイロード
+ * 各モードの待機人数をリアルタイムで配信
+ */
+export interface MatchingStatusPayload extends BasePayload {
+  type: 'MatchingStatus';
+  queues: {
+    freedom: number;
+    standard: number;
+    legacy: number;
+    limited: number;
+  };
+  timestamp: number;
+}

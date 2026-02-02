@@ -2,6 +2,7 @@ import type {
   ChoicesPayload,
   DebugPrintPayload,
   DisplayEffectPayload,
+  MatchingStatusPayload,
   MulliganStartPayload,
   OperationPayload,
   PlayerDisconnectedPayload,
@@ -88,3 +89,4 @@ export type Payload =
   | MatchingCancelRequestPayload
   | SituationCompletedPayload
   | LeaveRoomRequestPayload
+  | MatchingStatusPayload
