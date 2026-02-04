@@ -33,6 +33,7 @@ export const ErrorCode = {
   MATCHING_CANCELLED: 'MATCHING_004',
   MATCHING_INVALID_CRITERIA: 'MATCHING_005',
   MATCHING_INVALID_DECK: 'MATCHING_006',
+  MATCHING_INSUFFICIENT_CREDITS: 'MATCHING_007',
 
   // ゲームエラー (GAME_xxx)
   GAME_INVALID_MOVE: 'GAME_001',
@@ -68,6 +69,7 @@ export const ErrorMessage: Record<ErrorCode, string> = {
   [ErrorCode.MATCHING_CANCELLED]: 'マッチングがキャンセルされました',
   [ErrorCode.MATCHING_INVALID_CRITERIA]: 'マッチング条件が無効です',
   [ErrorCode.MATCHING_INVALID_DECK]: 'デッキがモードの条件を満たしていません',
+  [ErrorCode.MATCHING_INSUFFICIENT_CREDITS]: 'プレイ可能回数が不足しています',
 
   [ErrorCode.GAME_INVALID_MOVE]: '無効な手です',
   [ErrorCode.GAME_NOT_YOUR_TURN]: 'あなたのターンではありません',
