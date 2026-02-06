@@ -194,4 +194,5 @@ export interface MatchingStatusPayload extends BasePayload {
     limited: number;
   };
   timestamp: number;
+  activeGames: number;
 }
