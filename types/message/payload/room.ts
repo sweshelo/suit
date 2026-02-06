@@ -1,4 +1,5 @@
 import type { BasePayload } from './base';
+import type { PlayerDeck } from '../../game/deck';
 
 export interface RoomPayload extends BasePayload {
   roomId: string;
@@ -12,7 +13,6 @@ export interface PlayerEntryPayload extends RoomPayload {
   player: {
     name: string;
     id: string;
-    deck: string[];
+    deck: PlayerDeck;
   };
-  jokersOwned?: string[]; // FIXME: 将来的に deck に含める
 }

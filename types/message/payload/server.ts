@@ -1,5 +1,6 @@
 import type { BasePayload, RequestPayload, ResponsePayload } from './base';
 import type { Rule } from '../../rule';
+import type { PlayerDeck } from '../../game/deck';
 
 export interface RoomOpenRequestPayload extends RequestPayload {
   type: 'RoomOpenRequest';
@@ -31,9 +32,8 @@ export interface MatchingStartRequestPayload extends RequestPayload {
   player: {
     name: string;
     id: string;
-    deck: string[];
+    deck: PlayerDeck;
   };
-  jokersOwned?: string[];
 }
 
 /**
