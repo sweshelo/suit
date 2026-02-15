@@ -1,5 +1,6 @@
 export interface Rule {
   system: {
+    version: string; // エラッタ情報特定用
     round: number;
     turnTime: number; // ターン時間（秒）
     draw: {
