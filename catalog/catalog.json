@@ -3217,10 +3217,26 @@
     "id": "1-0-118",
     "name": "意気投合",
     "rarity": "uc",
-    "type": "trigger",
-    "color": 6,
-    "cost": 0,
-    "ability": "■意気投合\nあなたのユニットがフィールドに出た時、お互いのプレイヤーはカードを2枚引く。",
+    "errata": {
+      "original": {
+        "type": "trigger",
+        "color": 6,
+        "cost": 0,
+        "ability": "■意気投合\nあなたのユニットがフィールドに出た時、お互いのプレイヤーはカードを2枚引く。"
+      },
+      "2013-10-24": {
+        "type": "trigger",
+        "color": 6,
+        "cost": 0,
+        "ability": "■意気投合\n対戦相手のターン開始時、お互いのプレイヤーはカードを2枚引く。"
+      },
+      "2019-05-23": {
+        "type": "trigger",
+        "color": 6,
+        "cost": 0,
+        "ability": "■意気投合\nあなたのユニットがフィールドに出た時、お互いのプレイヤーはカードを2枚引く。"
+      }
+    },
     "originality": 2,
     "img": "/cards/Ver1.0EX/large_card/card_large_0150.jpg",
     "info": {

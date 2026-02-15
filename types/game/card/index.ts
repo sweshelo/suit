@@ -94,6 +94,26 @@ export interface IUnit extends ICard {
   isBooted: boolean;
 }
 
+export type InternalCatalog = {
+  id: string;
+  name: string;
+  rarity: 'c' | 'uc' | 'r' | 'vr' | 'sr' | 'pr' | 'sp';
+  color: number;
+  originality: number;
+  img: string;
+  info: {
+    version: number;
+    number: number;
+  };
+  gauge?: JokerGuageAmountKey;
+  visible?: number;
+  rank?: {
+    order: number;
+    point: number;
+  };
+  related?: string[];
+} & AbilityTimeline
+
 export interface Catalog {
   id: string;
   name: string;
@@ -117,4 +137,19 @@ export interface Catalog {
     point: number;
   };
   related?: string[];
+}
+
+interface Ability {
+  type: 'unit' | 'trigger' | 'intercept' | 'advanced_unit' | 'virus' | 'joker';
+  cost: number;
+  bp?: [number, number, number];
+  ability: string;
+  species?: Species[];
+}
+
+type AbilityTimeline = Ability | {
+  errata: {
+    // K は `YYYY-MM-DD` or `original` が指定 
+    [K: string]: Ability
+  }
 }
