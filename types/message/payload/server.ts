@@ -6,6 +6,10 @@ export interface RoomOpenRequestPayload extends RequestPayload {
   type: 'RoomOpenRequest';
   name: string;
   rule: Rule;
+  /** リプレイモードで開くかどうか */
+  isReplay?: boolean;
+  /** リプレイ時に使用する乱数シード */
+  seed?: number | null;
 }
 
 export interface RoomOpenResponsePayload extends ResponsePayload {
